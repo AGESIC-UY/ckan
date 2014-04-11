@@ -17,18 +17,11 @@ this.ckan.module('image-upload', function($, _) {
         remove: _('Remove'),
         upload_label: _('Image'),
         upload_tooltip: _('Upload a file on your computer'),
-        url_tooltip: _('Link to a URL on the internet (you can also link to an API)'),
-        remove_tooltip: _('Reset this')
+        url_tooltip: _('Link to a URL on the internet (you can also link to an API)')
       },
       template: [
         ''
       ].join("\n")
-    },
-
-    state: {
-      attached: 1,
-      blank: 2,
-      web: 3
     },
 
     /* Initialises the module setting up elements and event listeners.
@@ -69,15 +62,9 @@ this.ckan.module('image-upload', function($, _) {
       this.button_upload = $('<a href="javascript:;" class="btn"><i class="icon-cloud-upload"></i>'+this.i18n('upload')+'</a>')
         .insertAfter(this.input);
 
-      // Button to reset the form back to the first from when there is a image uploaded
-      this.button_remove = $('<a href="javascript:;" class="btn btn-danger" />')
-        .text(this.i18n('remove'))
-        .on('click', this._onRemove)
-        .insertAfter(this.button_upload);
-
       // Button for resetting the form when there is a URL set
       $('<a href="javascript:;" class="btn btn-danger btn-remove-url"><i class="icon-remove"></i></a>')
-        .prop('title', this.i18n('remove_tooltip'))
+        .prop('title', this.i18n('remove'))
         .on('click', this._onRemove)
         .insertBefore($('input', this.field_url));
 
@@ -94,49 +81,16 @@ this.ckan.module('image-upload', function($, _) {
 
       // Fields storage. Used in this.changeState
       this.fields = $('<i />')
-        .add(this.button_remove)
         .add(this.button_upload)
         .add(this.button_url)
         .add(this.input)
         .add(this.field_url)
         .add(this.field_image);
 
-      // Setup the initial state
-      if (options.is_url) {
-        this.changeState(this.state.web);
-      } else if (options.is_upload) {
-        this.changeState(this.state.attached);
+      if (options.is_url || options.is_upload) {
+        this._showOnlyFieldUrl();
       } else {
-        this.changeState(this.state.blank);
-      }
-
-    },
-
-    /* Method to change the display state of the image fields
-     *
-     * state - Pseudo constant for passing the state we should be in now
-     *
-     * Examples
-     *
-     *   this.changeState(this.state.web); // Sets the state in URL mode
-     *
-     * Returns nothing.
-     */
-    changeState: function(state) {
-      this.fields.hide();
-      if (state == this.state.blank) {
-        this.button_upload
-          .add(this.field_image)
-          .add(this.button_url)
-          .add(this.input)
-          .show();
-      } else if (state == this.state.attached) {
-        this.button_remove
-          .add(this.field_image)
-          .show();
-      } else if (state == this.state.web) {
-        this.field_url
-          .show();
+        this._showOnlyButtons();
       }
     },
 
@@ -145,7 +99,7 @@ this.ckan.module('image-upload', function($, _) {
      * Returns nothing.
      */
     _onFromWeb: function() {
-      this.changeState(this.state.web);
+      this._showOnlyFieldUrl();
       $('input', this.field_url).focus();
       if (this.options.is_upload) {
         this.field_clear.val('true');
@@ -157,7 +111,7 @@ this.ckan.module('image-upload', function($, _) {
      * Returns nothing.
      */
     _onRemove: function() {
-      this.changeState(this.state.blank);
+      this._showOnlyButtons();
       $('input', this.field_url).val('');
       this.field_clear.val('true');
     },
@@ -167,9 +121,32 @@ this.ckan.module('image-upload', function($, _) {
      * Returns nothing.
      */
     _onInputChange: function() {
-      this.file_name = this.input.val();
+      var file_name = this.input.val().split(/^C:\\fakepath\\/).pop();
+      $('input', this.field_url).val(file_name);
       this.field_clear.val('');
-      this.changeState(this.state.attached);
+      this._showOnlyFieldUrl();
+    },
+
+    /* Show only the buttons, hiding all others
+     *
+     * Returns nothing.
+     */
+    _showOnlyButtons: function() {
+      this.fields.hide();
+      this.button_upload
+        .add(this.field_image)
+        .add(this.button_url)
+        .add(this.input)
+        .show();
+    },
+
+    /* Show only the URL field, hiding all others
+     *
+     * Returns nothing.
+     */
+    _showOnlyFieldUrl: function() {
+      this.fields.hide();
+      this.field_url.show();
     },
 
     /* Event listener for when a user mouseovers the hidden file input
@@ -188,5 +165,5 @@ this.ckan.module('image-upload', function($, _) {
       this.button_upload.removeClass('hover');
     }
 
-  }
+  };
 });
