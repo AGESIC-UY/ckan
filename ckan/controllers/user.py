@@ -165,9 +165,8 @@ class UserController(base.BaseController):
         if context['save'] and not data:
             return self._save_new(context)
 
-        if c.user and not data:
-            # #1799 Don't offer the registration form if already logged in
-            return render('user/logout_first.html')
+        if not new_authz.is_sysadmin(c.user):
+            abort(401, _('Unauthorized to create a user'))
 
         data = data or {}
         errors = errors or {}

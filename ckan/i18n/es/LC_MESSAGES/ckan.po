@@ -250,7 +250,7 @@ msgstr "Los parámetros requeridos debe estar en forma de un diccionario en cód
 #: ckan/controllers/group.py:776 ckan/controllers/group.py:858
 #: ckan/controllers/package.py:1327 ckan/controllers/package.py:1338
 msgid "Group not found"
-msgstr "Grupo no encontrado"
+msgstr "Categoría no encontrada"
 
 #: ckan/controllers/feed.py:285 ckan/controllers/feed.py:287
 #: ckan/controllers/feed.py:437 ckan/controllers/feed.py:439
@@ -259,14 +259,14 @@ msgstr "El parámetro \"página\" debe ser un valor entero positivo"
 
 #: ckan/controllers/group.py:172
 msgid "Incorrect group type"
-msgstr "Tipo de grupo incorrecto"
+msgstr "Tipo de categoría incorrecto"
 
 #: ckan/controllers/group.py:192 ckan/controllers/group.py:387
 #: ckan/controllers/group.py:474 ckan/controllers/group.py:515
 #: ckan/controllers/group.py:547 ckan/controllers/group.py:860
 #, python-format
 msgid "Unauthorized to read group %s"
-msgstr "No estás autorizado para leer el grupo %s"
+msgstr "No estás autorizado para leer la categoría %s"
 
 #: ckan/controllers/group.py:289 ckan/controllers/home.py:70
 #: ckan/controllers/package.py:225 ckan/lib/helpers.py:601
@@ -279,7 +279,7 @@ msgstr "No estás autorizado para leer el grupo %s"
 #: ckan/templates/organization/read_base.html:6
 #: ckan/templates/package/base.html:14
 msgid "Organizations"
-msgstr "Organizaciones"
+msgstr "Organismos"
 
 #: ckan/controllers/group.py:290 ckan/controllers/home.py:71
 #: ckan/controllers/package.py:226 ckan/lib/helpers.py:602
@@ -298,7 +298,7 @@ msgstr "Organizaciones"
 #: ckan/templates_legacy/package/search.html:26
 #: ckan/templates_legacy/revision/read.html:64
 msgid "Groups"
-msgstr "Grupos"
+msgstr "Categorías"
 
 #: ckan/controllers/group.py:291 ckan/controllers/home.py:72
 #: ckan/controllers/package.py:227 ckan/lib/helpers.py:603
@@ -336,7 +336,7 @@ msgstr "No autorizado para llevar a cabo una actualización masiva."
 
 #: ckan/controllers/group.py:434
 msgid "Unauthorized to create a group"
-msgstr "No estás autorizado para crear un grupo"
+msgstr "No estás autorizado para crear una categoría"
 
 #: ckan/controllers/group.py:483 ckan/controllers/package.py:320
 #: ckan/controllers/package.py:811
@@ -360,29 +360,29 @@ msgstr "El usuario %r no está autorizado para editar %s autorizaciones"
 #: ckan/controllers/group.py:618 ckan/controllers/group.py:687
 #, python-format
 msgid "Unauthorized to delete group %s"
-msgstr "No estás autorizado para borrar el grupo %s"
+msgstr "No estás autorizado para borrar la categoría %s"
 
 #: ckan/controllers/group.py:597
 msgid "Organization has been deleted."
-msgstr "La Organización ha sido borrada."
+msgstr "El Organismo ha sido borrada."
 
 #: ckan/controllers/group.py:599
 msgid "Group has been deleted."
-msgstr "El grupo ha sido borrado."
+msgstr "La categoría ha sido borrada."
 
 #: ckan/controllers/group.py:658
 #, python-format
 msgid "Unauthorized to add member to group %s"
-msgstr "No estás autorizado para agregar miembros al grupo %s"
+msgstr "No estás autorizado para agregar miembros a la categoría %s"
 
 #: ckan/controllers/group.py:675
 #, python-format
 msgid "Unauthorized to delete group %s members"
-msgstr "No estás autorizado a borrar %s miembros del grupo"
+msgstr "No estás autorizado a borrar %s miembros de la categoría"
 
 #: ckan/controllers/group.py:681
 msgid "Group member has been deleted."
-msgstr "Miembro de grupo ha sido borrado."
+msgstr "Miembro de categoría ha sido borrado."
 
 #: ckan/controllers/group.py:703 ckan/controllers/package.py:423
 msgid "Select two revisions before doing the comparison."
@@ -395,11 +395,11 @@ msgstr "El usuario %r no está autorizado para editar %r"
 
 #: ckan/controllers/group.py:729
 msgid "CKAN Group Revision History"
-msgstr "Grupo CKAN Historial de Revisión"
+msgstr "Historial de revisiones de la categoría"
 
 #: ckan/controllers/group.py:732
 msgid "Recent changes to CKAN Group: "
-msgstr "Cambios recientes en el Grupo CKAN:"
+msgstr "Cambios recientes en la categoría: "
 
 #: ckan/controllers/group.py:753 ckan/controllers/package.py:473
 msgid "Log message: "
@@ -407,7 +407,7 @@ msgstr "Mensaje del log:"
 
 #: ckan/controllers/group.py:779
 msgid "Unauthorized to read group {group_id}"
-msgstr "No estás autorizado a leer el grupo {group_id}"
+msgstr "No estás autorizado a leer la categoría {group_id}"
 
 #: ckan/controllers/group.py:798 ckan/controllers/package.py:1255
 #: ckan/controllers/user.py:654
@@ -852,11 +852,11 @@ msgstr "{actor} ha añadido la etiqueta {tag} al conjunto de datos {dataset}"
 
 #: ckan/lib/activity_streams.py:67
 msgid "{actor} updated the group {group}"
-msgstr "{actor} actualizó el grupo {group}"
+msgstr "{actor} actualizó la categoría {group}"
 
 #: ckan/lib/activity_streams.py:70
 msgid "{actor} updated the organization {organization}"
-msgstr "{actor} actualizó la organización {organization}"
+msgstr "{actor} actualizó el organismo {organization}"
 
 #: ckan/lib/activity_streams.py:73
 msgid "{actor} updated the dataset {dataset}"
@@ -885,11 +885,11 @@ msgstr "{actor} actualizón {related_type} {related_item}"
 
 #: ckan/lib/activity_streams.py:92
 msgid "{actor} deleted the group {group}"
-msgstr "{actor} borró el grupo {group}"
+msgstr "{actor} borró la categoría {group}"
 
 #: ckan/lib/activity_streams.py:95
 msgid "{actor} deleted the organization {organization}"
-msgstr "{actor} borró la organización {organization}"
+msgstr "{actor} borró el organismo {organization}"
 
 #: ckan/lib/activity_streams.py:98
 msgid "{actor} deleted the dataset {dataset}"
@@ -905,11 +905,11 @@ msgstr "{actor} borró el recurso {resource} del conjunto de datos {dataset}"
 
 #: ckan/lib/activity_streams.py:108
 msgid "{actor} created the group {group}"
-msgstr "{actor} creó el grupo {group}"
+msgstr "{actor} creó la categoría {group}"
 
 #: ckan/lib/activity_streams.py:111
 msgid "{actor} created the organization {organization}"
-msgstr "{actor} creó la organización {organization}"
+msgstr "{actor} creó el organismo {organization}"
 
 #: ckan/lib/activity_streams.py:114
 msgid "{actor} created the dataset {dataset}"
@@ -1296,7 +1296,7 @@ msgstr "Conjunto de datos"
 #: ckanext/stats/templates/ckanext/stats/index.html:113
 #: ckanext/stats/templates_legacy/ckanext/stats/index.html:82
 msgid "Group"
-msgstr "Grupo"
+msgstr "Categoría"
 
 #: ckan/logic/converters.py:181
 msgid "Could not parse as valid JSON"
@@ -1304,19 +1304,19 @@ msgstr "No se puede parsear como un JSON válido"
 
 #: ckan/logic/validators.py:28
 msgid "A organization must be supplied"
-msgstr "Se debe proporcionar una organización"
+msgstr "Se debe proporcionar un organismo"
 
 #: ckan/logic/validators.py:38
 msgid "You cannot remove a dataset from an existing organization"
-msgstr "No puede borrar un conjunto de datos de una organización existente"
+msgstr "No puede borrar un conjunto de datos de un organismo existente"
 
 #: ckan/logic/validators.py:43
 msgid "Organization does not exist"
-msgstr "Organización no existe"
+msgstr "Organismo no existe"
 
 #: ckan/logic/validators.py:48
 msgid "You cannot add a dataset to this organization"
-msgstr "No es posible agregar un conjunto de datos a esta organización"
+msgstr "No es posible agregar un conjunto de datos a este organismo"
 
 #: ckan/logic/validators.py:68
 msgid "Invalid integer"
@@ -1342,7 +1342,7 @@ msgstr "Relacionados"
 
 #: ckan/logic/validators.py:216
 msgid "That group name or ID does not exist."
-msgstr "Nombre o identificador de grupo desconocido."
+msgstr "Nombre o identificador de categoría desconocido."
 
 #: ckan/logic/validators.py:230
 msgid "Activity type"
@@ -1403,7 +1403,7 @@ msgstr "Clave duplicada \"%s\""
 
 #: ckan/logic/validators.py:389
 msgid "Group name already exists in database"
-msgstr "Este nombre de grupo ya existe en la base de datos"
+msgstr "Este nombre de categoría ya existe en la base de datos"
 
 #: ckan/logic/validators.py:395
 #, python-format
@@ -1492,7 +1492,7 @@ msgstr "rol no existe."
 
 #: ckan/logic/validators.py:695
 msgid "Datasets with no organization can't be private."
-msgstr "Los conjuntos de datos sin organización no pueden ser privados."
+msgstr "Los conjuntos de datos sin organismo no pueden ser privados."
 
 #: ckan/logic/validators.py:701
 msgid "Not a list"
@@ -1523,7 +1523,7 @@ msgstr "API REST: Crear objecto miembro %s"
 
 #: ckan/logic/action/create.py:667
 msgid "Trying to create an organization as a group"
-msgstr "Intentando crear una organización como un grupo"
+msgstr "Intentando crear un organismo como una categoría"
 
 #: ckan/logic/action/create.py:751
 msgid "You must supply a package id or name (parameter \"package\")."
@@ -1565,7 +1565,7 @@ msgstr "El usuario {username} no existe."
 
 #: ckan/logic/action/create.py:1294 ckan/logic/action/create.py:1302
 msgid "You must be logged in to follow a group."
-msgstr "Debe haber iniciado sesión para seguir a un grupo."
+msgstr "Debe haber iniciado sesión para seguir a una categoría."
 
 #: ckan/logic/action/delete.py:68
 #, python-format
@@ -1650,7 +1650,7 @@ msgstr "No se ha encontrado TaskStatus."
 
 #: ckan/logic/action/update.py:1093
 msgid "Organization was not found."
-msgstr "Organización no encontrada."
+msgstr "Organismo no encontrado."
 
 #: ckan/logic/auth/create.py:19 ckan/logic/auth/create.py:37
 #, python-format
@@ -1660,12 +1660,12 @@ msgstr "El usuario %s no está autorizado para crear paquetes"
 #: ckan/logic/auth/create.py:23 ckan/logic/auth/update.py:39
 #, python-format
 msgid "User %s not authorized to edit these groups"
-msgstr "El usuario %s no está autorizado para editar estos grupos"
+msgstr "El usuario %s no está autorizado para editar estas categorías"
 
 #: ckan/logic/auth/create.py:30
 #, python-format
 msgid "User %s not authorized to add dataset to this organization"
-msgstr "El usuario %s no está autorizado para crear conjuntos de datos en esta organización"
+msgstr "El usuario %s no está autorizado para crear conjuntos de datos en este organismo"
 
 #: ckan/logic/auth/create.py:52
 msgid "You must be a sysadmin to create a featured related item"
@@ -1683,12 +1683,12 @@ msgstr "El usuario %s no está autorizado para editar estos paquetes"
 #: ckan/logic/auth/create.py:91
 #, python-format
 msgid "User %s not authorized to create groups"
-msgstr "El usuario %s no está autorizado para crear grupos"
+msgstr "El usuario %s no está autorizado para crear categorías"
 
 #: ckan/logic/auth/create.py:101
 #, python-format
 msgid "User %s not authorized to create organizations"
-msgstr "El usuario %s no está autorizado para crear organizaciones"
+msgstr "El usuario %s no está autorizado para crear organismos"
 
 #: ckan/logic/auth/create.py:117
 msgid "User {user} not authorized to create users via the API"
@@ -1700,7 +1700,7 @@ msgstr "No está autorizado a crear usuarios"
 
 #: ckan/logic/auth/create.py:163
 msgid "Group was not found."
-msgstr "No se ha encontrado el grupo."
+msgstr "No se ha encontrado la categoría."
 
 #: ckan/logic/auth/create.py:183
 msgid "Valid API key needed to create a package"
@@ -1708,7 +1708,7 @@ msgstr "Es necesaria una clave de API válida para crear un paquete"
 
 #: ckan/logic/auth/create.py:191
 msgid "Valid API key needed to create a group"
-msgstr "Es necesaria una clave de API válida para crear un grupo"
+msgstr "Es necesaria una clave de API válida para crear una categoría"
 
 #: ckan/logic/auth/create.py:211
 #, python-format
@@ -1718,7 +1718,7 @@ msgstr "El usuario %s no está autorizado para agregar miembros"
 #: ckan/logic/auth/create.py:235 ckan/logic/auth/update.py:107
 #, python-format
 msgid "User %s not authorized to edit group %s"
-msgstr "El usuario %s no está autorizado para editar el grupo %s"
+msgstr "El usuario %s no está autorizado para editar la categoría %s"
 
 #: ckan/logic/auth/delete.py:19
 #, python-format
@@ -1747,22 +1747,22 @@ msgstr "El usuario %s no está autorizado para eliminar la relación %s"
 #: ckan/logic/auth/delete.py:85
 #, python-format
 msgid "User %s not authorized to delete groups"
-msgstr "El usuario %s no está autorizado para eliminar grupos"
+msgstr "El usuario %s no está autorizado para eliminar categorías"
 
 #: ckan/logic/auth/delete.py:89
 #, python-format
 msgid "User %s not authorized to delete group %s"
-msgstr "El usuario %s no está autorizado para borrar el grupo %s"
+msgstr "El usuario %s no está autorizado para borrar la categoría %s"
 
 #: ckan/logic/auth/delete.py:106
 #, python-format
 msgid "User %s not authorized to delete organizations"
-msgstr "El usuario %s no está autorizado para eliminar organizaciones"
+msgstr "El usuario %s no está autorizado para eliminar organismos"
 
 #: ckan/logic/auth/delete.py:110
 #, python-format
 msgid "User %s not authorized to delete organization %s"
-msgstr "El usuario %s no está autorizado para eliminar la organización %s"
+msgstr "El usuario %s no está autorizado para eliminar el organismo %s"
 
 #: ckan/logic/auth/delete.py:123
 #, python-format
@@ -1772,7 +1772,7 @@ msgstr "Usuario %s no autorizado para borrar task_status"
 #: ckan/logic/auth/delete.py:139
 #, python-format
 msgid "User %s not authorized to delete organization %s members"
-msgstr "El usuario %s no está autorizado para eliminar los miembros de la organización %s"
+msgstr "El usuario %s no está autorizado para eliminar los miembros del organismo %s"
 
 #: ckan/logic/auth/get.py:93
 #, python-format
@@ -1811,7 +1811,7 @@ msgstr "El usuario %s no está autorizado para cambiar el estado del paquete %s"
 #: ckan/logic/auth/update.py:120
 #, python-format
 msgid "User %s not authorized to edit organization %s"
-msgstr "El usuario %s no está autorizado para editar la organización %s"
+msgstr "El usuario %s no está autorizado para editar el organismo %s"
 
 #: ckan/logic/auth/update.py:131 ckan/logic/auth/update.py:137
 msgid "Only the owner can update a related item"
@@ -1824,12 +1824,12 @@ msgstr "Usted debe ser administrador para cambiar un campo relacionado destacado
 #: ckan/logic/auth/update.py:159
 #, python-format
 msgid "User %s not authorized to change state of group %s"
-msgstr "El usuario %s no está autorizado para cambiar el estado del grupo %s"
+msgstr "El usuario %s no está autorizado para cambiar el estado de la categoría %s"
 
 #: ckan/logic/auth/update.py:176
 #, python-format
 msgid "User %s not authorized to edit permissions of group %s"
-msgstr "El usuario %s no está autorizado para editar los permisos del grupo %s"
+msgstr "El usuario %s no está autorizado para editar los permisos de la categoría %s"
 
 #: ckan/logic/auth/update.py:203
 msgid "Have to be logged in to edit user"
@@ -1861,7 +1861,7 @@ msgstr "Es necesaria una clave de API válida para editar un paquete"
 
 #: ckan/logic/auth/update.py:275
 msgid "Valid API key needed to edit a group"
-msgstr "Es necesaria una clave de API válida para editar un grupo"
+msgstr "Es necesaria una clave de API válida para editar una categoría"
 
 #: ckan/model/license.py:177
 msgid "License Not Specified"
@@ -2182,6 +2182,10 @@ msgstr "Error %(error_code)s"
 msgid "About {0}"
 msgstr "Acerca de {0}"
 
+#: ckan/templates/footer.html:9
+msgid "Terms of use"
+msgstr "Términos de uso"
+
 #: ckan/templates/footer.html:14
 msgid "CKAN API"
 msgstr "API CKAN"
@@ -2252,6 +2256,14 @@ msgstr "Registro"
 #: ckan/templates_legacy/user/read.html:78
 msgid "Datasets"
 msgstr "Conjuntos de datos"
+
+#: ckan/templates/home/snippets/search.html:2
+msgid "E.g. environment"
+msgstr "Ej. medio ambiente"
+
+#: ckan/templates/home/snippets/search.html:6
+msgid "Search data"
+msgstr "Buscar conjuntos de datos"
 
 #: ckan/templates/header.html:107
 msgid "Search Datasets"
@@ -2514,7 +2526,15 @@ msgstr "Seleccionar"
 #: ckan/templates/snippets/group.html:24
 #: ckan/templates/snippets/group_item.html:18
 msgid "There is no description for this group"
-msgstr "No existe una descripción para este grupo"
+msgstr "No existe una descripción para esta categoría"
+
+#: ckanext/agesic/templates/snippets/most_recent.html:6
+msgid "Most recent updates"
+msgstr "Actualizaciones más recientes"
+
+#: ckanext/agesic/templates/snippets/most_viewed.html:6
+msgid "Most viewed datasets"
+msgstr "Conjuntos de datos más vistos"
 
 #: ckan/templates/group/activity_stream.html:3
 #: ckan/templates/group/activity_stream.html:6
@@ -2541,11 +2561,11 @@ msgstr "Administradores"
 #: ckan/templates/group/base_form_page.html:7
 #: ckan/templates_legacy/group/layout.html:32
 msgid "Add a Group"
-msgstr "Añadir un grupo"
+msgstr "Añadir una categoría"
 
 #: ckan/templates/group/base_form_page.html:11
 msgid "Group Form"
-msgstr "Formulario de Grupo"
+msgstr "Formulario de Categoría"
 
 #: ckan/templates/group/confirm_delete.html:3
 #: ckan/templates/group/confirm_delete.html:15
@@ -2566,7 +2586,7 @@ msgstr "Confirmar Borrado"
 
 #: ckan/templates/group/confirm_delete.html:11
 msgid "Are you sure you want to delete group - {name}?"
-msgstr "¿Está seguro de que desea eliminar el grupo - {name}?"
+msgstr "¿Está seguro de que desea eliminar la categoría - {name}?"
 
 #: ckan/templates/group/confirm_delete_member.html:11
 #: ckan/templates/organization/confirm_delete_member.html:11
@@ -2587,7 +2607,7 @@ msgstr "Administrar"
 
 #: ckan/templates/group/edit.html:12
 msgid "Edit Group"
-msgstr "Editar Grupo"
+msgstr "Editar Categoría"
 
 #: ckan/templates/group/edit_base.html:16
 #: ckan/templates/organization/edit_base.html:17
@@ -2632,15 +2652,15 @@ msgstr "Historial"
 #: ckan/templates/user/dashboard_groups.html:7
 #: ckan/templates_legacy/js_strings.html:16
 msgid "Add Group"
-msgstr "Añadir grupo"
+msgstr "Añadir categoría"
 
 #: ckan/templates/group/index.html:20
 msgid "Search groups..."
-msgstr "Buscar grupos..."
+msgstr "Buscar categorías..."
 
 #: ckan/templates/group/index.html:29
 msgid "There are currently no groups for this site"
-msgstr "No existen actualmente grupos para este sitio"
+msgstr "No existen actualmente categorías para este sitio"
 
 #: ckan/templates/group/index.html:31
 #: ckan/templates/organization/index.html:31
@@ -2761,25 +2781,25 @@ msgid ""
 " <p><strong>Admin:</strong> Can edit group information, as well as manage "
 "organization members.</p> <p><strong>Member:</strong> Can add/remove "
 "datasets from groups</p> "
-msgstr "<p><strong>Administrador:</strong>Puede editar información del grupo, así como también administrar miembros de la organización.</p><p><strong>Miembro:</strong> Puede agregar/eliminar conjuntos de datos de grupos.</p>"
+msgstr "<p><strong>Administrador:</strong>Puede editar información de la categoría, así como también administrar miembros del organismo.</p><p><strong>Miembro:</strong> Puede agregar/eliminar conjuntos de datos de categorías.</p>"
 
 #: ckan/templates/group/new.html:3 ckan/templates/group/new.html:5
 #: ckan/templates/group/new.html:7
 msgid "Create a Group"
-msgstr "Crear un Grupo"
+msgstr "Crear una Categoría"
 
 #: ckan/templates/group/new_group_form.html:17
 msgid "Update Group"
-msgstr "Actualizar Grupo"
+msgstr "Actualizar Categoría"
 
 #: ckan/templates/group/new_group_form.html:19
 msgid "Create Group"
-msgstr "Crear Grupo"
+msgstr "Crear Categoría"
 
 #: ckan/templates/group/snippets/feeds.html:3
 #: ckan/templates/organization/snippets/feeds.html:3
 msgid "Datasets in group: {group}"
-msgstr "Conjuntos de datos en el grupo: {group}"
+msgstr "Conjuntos de datos en la categoría: {group}"
 
 #: ckan/templates/group/snippets/feeds.html:4
 #: ckan/templates/organization/snippets/feeds.html:4
@@ -2796,11 +2816,11 @@ msgstr "Nombre"
 
 #: ckan/templates/group/snippets/group_form.html:10
 msgid "My Group"
-msgstr "Mi Grupo"
+msgstr "Mi Categoría"
 
 #: ckan/templates/group/snippets/group_form.html:18
 msgid "my-group"
-msgstr "mi-grupo"
+msgstr "mi-categoria"
 
 #: ckan/templates/group/snippets/group_form.html:20
 #: ckan/templates/organization/snippets/organization_form.html:20
@@ -2817,19 +2837,19 @@ msgstr "Descripción"
 
 #: ckan/templates/group/snippets/group_form.html:20
 msgid "A little information about my group..."
-msgstr "Un poco de información acerca de mi grupo..."
+msgstr "Un poco de información acerca de mi categoría..."
 
 #: ckan/templates/group/snippets/group_form.html:80
 msgid "Are you sure you want to delete this Group?"
-msgstr "¿Está seguro de que desea eliminar este Grupo?"
+msgstr "¿Está seguro de que desea eliminar esta categoría?"
 
 #: ckan/templates/group/snippets/group_form.html:85
 msgid "Save Group"
-msgstr "Guardar Grupo"
+msgstr "Guardar categoría"
 
 #: ckan/templates/group/snippets/group_item.html:27
 msgid "This group has no description"
-msgstr "Este grupo no tiene una descripción"
+msgstr "Esta categoría no tiene una descripción"
 
 #: ckan/templates/group/snippets/group_item.html:32
 #: ckan/templates/organization/snippets/organization_item.html:31
@@ -2850,11 +2870,11 @@ msgstr "Ver {name}"
 
 #: ckan/templates/group/snippets/group_item.html:41
 msgid "Remove dataset from this group"
-msgstr "Borrar el conjunto de datos de este grupo"
+msgstr "Borrar el conjunto de datos de esta categoría"
 
 #: ckan/templates/group/snippets/helper.html:4
 msgid "What are Groups?"
-msgstr "¿Qué son los Grupos?"
+msgstr "¿Qué son las categorías?"
 
 #: ckan/templates/group/snippets/helper.html:8
 msgid ""
@@ -2862,7 +2882,7 @@ msgid ""
 "could be to catalogue datasets for a particular project or team, or on a "
 "particular theme, or as a very simple way to help people find and search "
 "your own published datasets. "
-msgstr "Puedes usar los grupos de CKAN para crear y administrar colecciones de conjuntos de datos. Esto se puede usar para catalogar conjuntos de datos de un proyecto concreto o un equipo, o de un tema en particular, o como una manera muy sencilla de ayudar a la gente a buscar y encontrar sus propios conjuntos de datos publicados."
+msgstr "Puedes usar las categorías de CKAN para crear y administrar colecciones de conjuntos de datos. Esto se puede usar para catalogar conjuntos de datos de un proyecto concreto o un equipo, o de un tema en particular, o como una manera muy sencilla de ayudar a la gente a buscar y encontrar sus propios conjuntos de datos publicados."
 
 #: ckan/templates/group/snippets/history_revisions.html:10
 #: ckan/templates/package/snippets/history_revisions.html:10
@@ -2926,6 +2946,22 @@ msgstr "Mensaje de registro"
 msgid "Welcome"
 msgstr "Bienvenida"
 
+#: ckanext/agesic/templates/home/index.html:13
+msgid "Applications"
+msgstr "Aplicaciones"
+
+#: ckanext/agesic/templates/home/index.html:14
+msgid "Add and share your own applications using open data"
+msgstr "Añada sus propias aplicaciones con datos abiertos para compartirlas con otros"
+
+#: ckanext/agesic/templates/home/index.html:15
+msgid "Add application"
+msgstr "Agregar aplicación"
+
+#: ckanext/agesic/templates/home/index.html:16
+msgid "Show applications"
+msgstr "Ver aplicaciones"
+
 #: ckan/templates/home/snippets/about_text.html:1
 msgid ""
 " <p>CKAN is the world’s leading open-source data portal platform.</p> "
@@ -2983,8 +3019,8 @@ msgid "Search"
 msgstr "Búsqueda"
 
 #: ckan/templates/home/snippets/search.html:16
-msgid "Popular Tags"
-msgstr "Etiquetas Populares"
+msgid "Popular tags"
+msgstr "Etiquetas populares"
 
 #: ckan/templates/home/snippets/stats.html:5
 msgid "{0} statistics"
@@ -3002,19 +3038,19 @@ msgstr "conjuntos de datos"
 
 #: ckan/templates/home/snippets/stats.html:16
 msgid "organization"
-msgstr "organización"
+msgstr "organismo"
 
 #: ckan/templates/home/snippets/stats.html:16
 msgid "organizations"
-msgstr "Organizaciones"
+msgstr "Organismos"
 
 #: ckan/templates/home/snippets/stats.html:22
 msgid "group"
-msgstr "grupo"
+msgstr "categoría"
 
 #: ckan/templates/home/snippets/stats.html:22
 msgid "groups"
-msgstr "grupos"
+msgstr "categorías"
 
 #: ckan/templates/home/snippets/stats.html:28
 msgid "related item"
@@ -3070,11 +3106,11 @@ msgstr "Eliminar Carga"
 #: ckan/templates/snippets/organization.html:37
 #: ckan/templates/snippets/organization_item.html:16
 msgid "There is no description for this organization"
-msgstr "No existe una descripción para esta organización"
+msgstr "No existe una descripción para este organismo"
 
 #: ckan/templates/organization/base_form_page.html:5
 msgid "Organization Form"
-msgstr "Formulario de la Organización"
+msgstr "Formulario del Organismo"
 
 #: ckan/templates/organization/bulk_process.html:3
 #: ckan/templates/organization/bulk_process.html:11
@@ -3129,7 +3165,7 @@ msgstr "Este conjunto de datos no tiene una descripción"
 
 #: ckan/templates/organization/bulk_process.html:90
 msgid "This organization has no datasets associated to it"
-msgstr "Esta organización no tiene conjuntos de datos asociados a ella"
+msgstr "Este organismo no tiene conjuntos de datos asociados"
 
 #: ckan/templates/organization/bulk_process.html:99
 #: ckan/templates/package/search.html:30
@@ -3157,26 +3193,26 @@ msgstr "Última modificación"
 
 #: ckan/templates/organization/confirm_delete.html:11
 msgid "Are you sure you want to delete organization - {name}?"
-msgstr "¿Está seguro de que desea eliminar la organización - {name}?"
+msgstr "¿Está seguro de que desea eliminar el organismo - {name}?"
 
 #: ckan/templates/organization/edit.html:6
 #: ckan/templates/organization/snippets/info.html:13
 #: ckan/templates/organization/snippets/info.html:16
 msgid "Edit Organization"
-msgstr "Editar Organización"
+msgstr "Editar Organismo"
 
 #: ckan/templates/organization/index.html:13
 #: ckan/templates/user/dashboard_organizations.html:7
 msgid "Add Organization"
-msgstr "Agregar Organización"
+msgstr "Agregar Organismo"
 
 #: ckan/templates/organization/index.html:20
 msgid "Search organizations..."
-msgstr "Buscar organizaciones"
+msgstr "Buscar organismos"
 
 #: ckan/templates/organization/index.html:29
 msgid "There are currently no organizations for this site"
-msgstr "Actualmente no existen organizaciones para este sitio"
+msgstr "Actualmente no existen organismos para este sitio"
 
 #: ckan/templates/organization/member_new.html:58
 msgid "Update Member"
@@ -3189,22 +3225,22 @@ msgid ""
 "edit datasets, but not manage organization members.</p> "
 "<p><strong>Member:</strong> Can view the organization's private datasets, "
 "but not add new datasets.</p> "
-msgstr "<p><strong>Administrador:</strong> Puede agregar/editar y eliminar conjuntos de datos, así como también administrar a los miembros de una organización.</p> <p><strong>Editor:</strong> Puede agregar y editar conjuntos de datos, pero no administrar a los miembros de una organización.</p> <p><strong>Miembro:</strong> Puede ver los conjuntos de datos privados de una organización, pero no agregar nuevos conjuntos de datos.</p>"
+msgstr "<p><strong>Administrador:</strong> Puede agregar/editar y eliminar conjuntos de datos, así como también administrar a los miembros de un organismo.</p> <p><strong>Editor:</strong> Puede agregar y editar conjuntos de datos, pero no administrar a los miembros de un organismo.</p> <p><strong>Miembro:</strong> Puede ver los conjuntos de datos privados de un organismo, pero no agregar nuevos conjuntos de datos.</p>"
 
 #: ckan/templates/organization/new.html:3
 #: ckan/templates/organization/new.html:5
 #: ckan/templates/organization/new.html:7
 #: ckan/templates/organization/new.html:12
 msgid "Create an Organization"
-msgstr "Crear una Organización"
+msgstr "Crear un Organismo"
 
 #: ckan/templates/organization/new_organization_form.html:17
 msgid "Update Organization"
-msgstr "Actualizar Organización"
+msgstr "Actualizar Organismo"
 
 #: ckan/templates/organization/new_organization_form.html:19
 msgid "Create Organization"
-msgstr "Crear Organización"
+msgstr "Crear Organismo"
 
 #: ckan/templates/organization/read.html:5
 #: ckan/templates/package/search.html:16
@@ -3217,7 +3253,7 @@ msgstr "Agrega conjunto de datos"
 #: ckan/templates/organization/snippets/help.html:4
 #: ckan/templates/organization/snippets/helper.html:4
 msgid "What are Organizations?"
-msgstr "¿Qué son las Organizaciones?"
+msgstr "¿Qué son los Organismos?"
 
 #: ckan/templates/organization/snippets/help.html:7
 msgid ""
@@ -3227,40 +3263,40 @@ msgid ""
 "organizations, admins can assign roles and authorisation its members, giving"
 " individual users the right to publish datasets from that particular "
 "organisation (e.g. Office of National Statistics).</p> "
-msgstr "<p>Las organizaciones actúan como departamentos de publicación para los conjuntos de datos (por ejemplo, el Departamento de Salud). Esto significa que los conjuntos de datos pueden ser publicados por y pertenecer a un departamento en vez de a un usuario individual.</p> <p>Dentro de las organizaciones, los administradores asignan roles y autorizaciones para sus miembros, dándoles a los usuarios individuales el derecho a publicar conjuntos de datos de esa organización en particular (ej.: Oficina Nacional de Estadísticas).</p>"
+msgstr "<p>Los organismos actúan como departamentos de publicación para los conjuntos de datos (por ejemplo, el Departamento de Salud). Esto significa que los conjuntos de datos pueden ser publicados por y pertenecer a un departamento en vez de a un usuario individual.</p> <p>Dentro de los organismos, los administradores asignan roles y autorizaciones para sus miembros, dándoles a los usuarios individuales el derecho a publicar conjuntos de datos de ese organismo en particular (ej.: Oficina Nacional de Estadísticas).</p>"
 
 #: ckan/templates/organization/snippets/helper.html:8
 msgid ""
 " CKAN Organizations are used to create, manage and publish collections of "
 "datasets. Users can have different roles within an Organization, depending "
 "on their level of authorisation to create, edit and publish. "
-msgstr "Las organizaciones en CKAN son usadas para crear, gestionar y publicar colecciones de conjuntos de datos. Los usuarios pueden tener diferentes perfiles en una organización, dependiente de su nivel de autorización para crear, editar y publicar"
+msgstr "Los organismos en CKAN son usados para crear, gestionar y publicar colecciones de conjuntos de datos. Los usuarios pueden tener diferentes perfiles en un organismo, dependiente de su nivel de autorización para crear, editar y publicar"
 
 #: ckan/templates/organization/snippets/organization_form.html:10
 msgid "My Organization"
-msgstr "Mi Organización"
+msgstr "Mi Organismo"
 
 #: ckan/templates/organization/snippets/organization_form.html:18
 msgid "my-organization"
-msgstr "mi-organizacion"
+msgstr "mi-organismo"
 
 #: ckan/templates/organization/snippets/organization_form.html:20
 msgid "A little information about my organization..."
-msgstr "Un poco de información acerca de mi organización..."
+msgstr "Un poco de información acerca de mi organismo..."
 
 #: ckan/templates/organization/snippets/organization_form.html:81
 msgid ""
 "Are you sure you want to delete this Organization? This will delete all the "
 "public and private datasets belonging to this organization."
-msgstr "¿Estás seguro de que quieres borrar esta Organización? Esto borrará los conjuntos de datos privados y públicos que pertenecen a esta organización."
+msgstr "¿Estás seguro de que quieres borrar este Organismo? Esto borrará los conjuntos de datos privados y públicos que pertenecen a este organismo."
 
 #: ckan/templates/organization/snippets/organization_form.html:85
 msgid "Save Organization"
-msgstr "Guardar Organización"
+msgstr "Guardar Organismo"
 
 #: ckan/templates/organization/snippets/organization_item.html:26
 msgid "This organization has no description"
-msgstr "Esta organización no tiene una descripción"
+msgstr "Este organismo no tiene una descripción"
 
 #: ckan/templates/organization/snippets/organization_item.html:36
 #: ckan/templates/organization/snippets/organization_item.html:37
@@ -3301,15 +3337,15 @@ msgstr "Editar metadatos"
 
 #: ckan/templates/package/group_list.html:14
 msgid "Associate this group with this dataset"
-msgstr "Asocia este grupo con este conjunto de datos"
+msgstr "Asocia esta categoría con este conjunto de datos"
 
 #: ckan/templates/package/group_list.html:14
 msgid "Add to group"
-msgstr "Añadir al grupo"
+msgstr "Añadir a la categoría"
 
 #: ckan/templates/package/group_list.html:23
 msgid "There are no groups associated with this dataset"
-msgstr "No hay grupos asociados a este conjunto de datos"
+msgstr "No hay categorías asociadas a este conjunto de datos"
 
 #: ckan/templates/package/new_package_form.html:23
 msgid "Update Dataset"
@@ -3582,6 +3618,39 @@ msgstr "Versión"
 msgid "State"
 msgstr "Estado"
 
+#: ckanext/agesic/templates/package/snippets/additional_info.html:7
+#: ckanext/agesic/templates/package/snippets/package_basic_fields.html:5
+msgid "Update Frequency"
+msgstr "Frecuencia de Actualización"
+
+#: ckanext/agesic/templates/package/snippets/additional_info.html:13
+#: ckanext/agesic/templates/package/snippets/package_basic_fields.html:15
+msgid "Spatial Ref. System"
+msgstr "Sistema de Referencia"
+
+#: ckanext/agesic/templates/package/snippets/package_basic_fields.html:15
+msgid "eg. SIRGAS-ROU98"
+msgstr "ej. SIRGAS-ROU98"
+
+#: ckanext/agesic/templates/package/snippets/package_basic_fields.html:16
+msgid "eg. Uruguay"
+msgstr "ej. Uruguay"
+
+#: ckanext/agesic/templates/package/snippets/package_basic_fields.html:15
+msgid "eg. 2013"
+msgstr "ej. 2013"
+
+#: ckanext/agesic/templates/package/snippets/additional_info.html:19
+#: ckanext/agesic/templates/package/snippets/package_basic_fields.html:16
+msgid "Spatial Coverage"
+msgstr "Cobertura Espacial"
+
+#: ckanext/agesic/templates/package/snippets/additional_info.html:25
+#: ckanext/agesic/templates/package/snippets/package_basic_fields.html:17
+msgid "Temporal Coverage"
+msgstr "Cobertura Temporal"
+
+
 #: ckan/templates/package/snippets/data_api_button.html:10
 #: ckan/templates_legacy/package/resource_read.html:84
 #: ckan/templates_legacy/package/resource_read.html:87
@@ -3622,11 +3691,11 @@ msgstr "Definiciones de licencias e información adicional puede ser encontrada 
 #: ckan/templates/package/snippets/package_basic_fields.html:69
 #: ckan/templates/snippets/organization.html:20
 msgid "Organization"
-msgstr "Organización"
+msgstr "Organismo"
 
 #: ckan/templates/package/snippets/package_basic_fields.html:72
 msgid "No organization"
-msgstr "Sin organización"
+msgstr "Sin organismo"
 
 #: ckan/templates/package/snippets/package_basic_fields.html:86
 msgid "Visibility"
@@ -3809,7 +3878,7 @@ msgstr "Agregar datos"
 #: ckan/templates/package/snippets/stages.html:48
 #: ckan/templates/package/snippets/stages.html:50
 msgid "Additional info"
-msgstr "Información Adicional"
+msgstr "Información adicional"
 
 #: ckan/templates/related/base_form_page.html:12
 msgid "Related Form"
@@ -4141,42 +4210,42 @@ msgstr "Conjuntos de datos no encontrados"
 #: ckan/templates/snippets/search_result_text.html:21
 msgid "{number} group found for \"{query}\""
 msgid_plural "{number} groups found for \"{query}\""
-msgstr[0] "{number} grupo encontrado para \"{query}\""
-msgstr[1] "{number} grupos encontrados para \"{query}\""
+msgstr[0] "{number} categoría encontrada para \"{query}\""
+msgstr[1] "{number} categorías encontradas para \"{query}\""
 
 #: ckan/templates/snippets/search_result_text.html:22
 msgid "No groups found for \"{query}\""
-msgstr "Lo sentimos, no se encontraron grupos para \"{query}\""
+msgstr "Lo sentimos, no se encontraron categorías para \"{query}\""
 
 #: ckan/templates/snippets/search_result_text.html:23
 msgid "{number} group found"
 msgid_plural "{number} groups found"
-msgstr[0] "{number} grupo encontrado"
-msgstr[1] "{number} grupos encontrados"
+msgstr[0] "{number} categoría encontrada"
+msgstr[1] "{number} categorías encontradas"
 
 #: ckan/templates/snippets/search_result_text.html:24
 msgid "No groups found"
-msgstr "No se han encontrado grupos"
+msgstr "No se han encontrado categorías"
 
 #: ckan/templates/snippets/search_result_text.html:27
 msgid "{number} organization found for \"{query}\""
 msgid_plural "{number} organizations found for \"{query}\""
-msgstr[0] "{number} organización encontrada para \"{query}\""
-msgstr[1] "{number} organizaciones encontradas para \"{query}\""
+msgstr[0] "{number} organismo encontrado para \"{query}\""
+msgstr[1] "{number} organismos encontrados para \"{query}\""
 
 #: ckan/templates/snippets/search_result_text.html:28
 msgid "No organizations found for \"{query}\""
-msgstr "Lo sentimos, no se encontraron organizaciones para \"{query}\""
+msgstr "Lo sentimos, no se encontraron organismos para \"{query}\""
 
 #: ckan/templates/snippets/search_result_text.html:29
 msgid "{number} organization found"
 msgid_plural "{number} organizations found"
-msgstr[0] "{number} organización encontrada"
-msgstr[1] "{number} organizaciones encontradas"
+msgstr[0] "{number} organismo encontrado"
+msgstr[1] "{number} organismos encontrados"
 
 #: ckan/templates/snippets/search_result_text.html:30
 msgid "No organizations found"
-msgstr "Lo sentimos, no se encontraron organizaciones"
+msgstr "Lo sentimos, no se encontraron organismos"
 
 #: ckan/templates/snippets/social.html:3
 msgid "Social"
@@ -4225,12 +4294,12 @@ msgstr "Mis Conjuntos de Datos"
 #: ckan/templates/user/dashboard.html:21
 #: ckan/templates/user/dashboard_organizations.html:12
 msgid "My Organizations"
-msgstr "Mis organizaciones"
+msgstr "Mis organismos"
 
 #: ckan/templates/user/dashboard.html:22
 #: ckan/templates/user/dashboard_groups.html:12
 msgid "My Groups"
-msgstr "Mis Grupos"
+msgstr "Mis Categorías"
 
 #: ckan/templates/user/dashboard.html:39
 msgid "Activity from items that I'm following"
@@ -4250,11 +4319,11 @@ msgstr "¿Crear uno ahora?"
 
 #: ckan/templates/user/dashboard_groups.html:20
 msgid "You are not a member of any groups."
-msgstr "No eres miembro de ninguno de los grupos."
+msgstr "No eres miembro de ninguna de las categorías."
 
 #: ckan/templates/user/dashboard_organizations.html:20
 msgid "You are not a member of any organizations."
-msgstr "No eres miembro de ninguna de las organizaciones."
+msgstr "No eres miembro de ninguno de los organismos."
 
 #: ckan/templates/user/edit.html:6 ckan/templates/user/edit_base.html:3
 #: ckan/templates/user/list.html:6 ckan/templates/user/list.html:13
@@ -4413,7 +4482,7 @@ msgstr "¿Por qué registrarse?"
 
 #: ckan/templates/user/new.html:24
 msgid "Create datasets, groups and other exciting things"
-msgstr "Crear conjuntos de datos, grupos y otras cosas interesantes"
+msgstr "Crear conjuntos de datos, categorías y otras cosas interesantes"
 
 #: ckan/templates/user/new_user_form.html:6
 msgid "Full Name"
@@ -4881,7 +4950,7 @@ msgstr "Edita:"
 #: ckan/templates_legacy/group/edit_form.html:17
 #: ckan/templates_legacy/group/new_group_form.html:114
 msgid "There are no datasets currently in this group."
-msgstr "Al momento no hay ningún conjunto de datos en este grupo."
+msgstr "Al momento no hay ningún conjunto de datos en esta categoría."
 
 #: ckan/templates_legacy/group/history.html:5
 #: ckan/templates_legacy/group/history.html:6
@@ -4896,16 +4965,16 @@ msgstr "Comparar »"
 
 #: ckan/templates_legacy/group/history.html:54
 msgid "Group History"
-msgstr "Historial del Grupo"
+msgstr "Historial de la categoría"
 
 #: ckan/templates_legacy/group/index.html:6
 #: ckan/templates_legacy/group/index.html:7
 msgid "Groups of Datasets"
-msgstr "Grupos de Conjuntos de Datos"
+msgstr "Categorías de Conjuntos de Datos"
 
 #: ckan/templates_legacy/group/index.html:11
 msgid "What Are Groups?"
-msgstr "¿Qué son los grupos?"
+msgstr "¿Qué son las categorías?"
 
 #: ckan/templates_legacy/group/index.html:12
 msgid ""
@@ -4913,11 +4982,11 @@ msgid ""
 "when you want to restrict users from editing a collection. A [1:group] can "
 "be set-up to specify which users have permission to add or remove datasets "
 "from it."
-msgstr "A pesar de que las etiquetas son muy útiles para agrupar conjuntos de datos, hay ocasiones en que hace falta restringir la edición dentro de una colección a los usuarios. Se puede crear un [1:grupo] para especificar que usuarios tienen permiso para añadirle o eliminar conjuntos de datos."
+msgstr "A pesar de que las etiquetas son muy útiles para agrupar conjuntos de datos, hay ocasiones en que hace falta restringir la edición dentro de una colección a los usuarios. Se puede crear un [1:categoría] para especificar que usuarios tienen permiso para añadirle o eliminar conjuntos de datos."
 
 #: ckan/templates_legacy/group/layout.html:18
 msgid "New Dataset..."
-msgstr "Nuevo Conjuntos de Datos..."
+msgstr "Nuevo Conjunto de Datos..."
 
 #: ckan/templates_legacy/group/layout.html:19
 msgid "Existing Dataset..."
@@ -4925,16 +4994,16 @@ msgstr "Conjunto de datos ya existente..."
 
 #: ckan/templates_legacy/group/layout.html:29
 msgid "List Groups"
-msgstr "Listar Grupos"
+msgstr "Listar categorías"
 
 #: ckan/templates_legacy/group/layout.html:35
 msgid "Login to Add a Group"
-msgstr "Accede para Añadir Grupo"
+msgstr "Accede para añadir una categoría"
 
 #: ckan/templates_legacy/group/new.html:5
 #: ckan/templates_legacy/group/new.html:6
 msgid "Add A Group"
-msgstr "Añadir un grupo"
+msgstr "Añadir una categoría"
 
 #: ckan/templates_legacy/group/new_group_form.html:13
 #: ckan/templates_legacy/package/form.html:7
@@ -4965,7 +5034,7 @@ msgstr "URL de la imagen:"
 
 #: ckan/templates_legacy/group/new_group_form.html:50
 msgid "The URL for the image that is associated with this group."
-msgstr "La URL de la imagen asociada con este grupo."
+msgstr "La URL de la imagen asociada con esta categoría."
 
 #: ckan/templates_legacy/group/new_group_form.html:57
 #: ckan/templates_legacy/package/new_package_form.html:271
@@ -5347,7 +5416,7 @@ msgstr "Añadir a:"
 
 #: ckan/templates_legacy/package/new_package_form.html:112
 msgid "Cannot add any groups."
-msgstr "No pueden añadirse nuevos grupos."
+msgstr "No pueden añadirse nuevas categorías."
 
 #: ckan/templates_legacy/package/new_package_form.html:122
 msgid ""
@@ -5448,7 +5517,7 @@ msgstr "Resumen"
 
 #: ckan/templates_legacy/package/new_package_form.html:283
 msgid "Briefly describe the changes you have made..."
-msgstr "Describe brevemente los cambios que has echo..."
+msgstr "Describe brevemente los cambios que has hecho..."
 
 #: ckan/templates_legacy/package/new_package_form.html:294
 msgid ""
@@ -5856,7 +5925,7 @@ msgstr "Seguir a otro usuario"
 
 #: ckan/templates_legacy/user/dashboard.html:30
 msgid "Create a group or a tag"
-msgstr "Crear un grupo o una etiqueta"
+msgstr "Crear una categoría o una etiqueta"
 
 #: ckan/templates_legacy/user/dashboard.html:31
 msgid "Or simply browse the repository"
@@ -6016,7 +6085,7 @@ msgstr "Salir de"
 
 #: ckan/templates_legacy/user/logout.html:12
 msgid "You have logged out successfully."
-msgstr "Se ha conectado con éxito."
+msgstr "Se ha desconectado con éxito."
 
 #: ckan/templates_legacy/user/logout_first.html:6
 msgid "Logged in - User"
@@ -6048,7 +6117,7 @@ msgstr "Registro - Usuario"
 
 #: ckan/templates_legacy/user/new.html:6
 msgid "Register for a new Account"
-msgstr "Regístres para una cuenta nueva"
+msgstr "Regístrese para una cuenta nueva"
 
 #: ckan/templates_legacy/user/new_user_form.html:22
 msgid "3+ chars, using only 'a-z0-9' and '-_'"
@@ -6255,11 +6324,11 @@ msgstr "No existen conjuntos de datos editados"
 #: ckanext/stats/templates/ckanext/stats/index.html:182
 #: ckanext/stats/templates_legacy/ckanext/stats/index.html:80
 msgid "Largest Groups"
-msgstr "Grupos más grandes"
+msgstr "Categorías más grandes"
 
 #: ckanext/stats/templates/ckanext/stats/index.html:127
 msgid "No groups"
-msgstr "No existen grupos"
+msgstr "No existen categorías"
 
 #: ckanext/stats/templates/ckanext/stats/index.html:132
 #: ckanext/stats/templates/ckanext/stats/index.html:183
@@ -6313,8 +6382,12 @@ msgstr "Clasificación para el conjunto de datos"
 msgid ""
 "Choose a dataset attribute and find out which categories in that area have "
 "the most datasets. E.g. tags, groups, license, res_format, country."
-msgstr "Selecciona un atributo de los conjuntos de datos y descubre cuales son las categorias en este área que tienen el mayor número de conjuntos de datos. Por ejemplo: etiquetas, grupos, licencia, res_format, país."
+msgstr "Selecciona un atributo de los conjuntos de datos y descubre cuales son las categorias en este área que tienen el mayor número de conjuntos de datos. Por ejemplo: etiquetas, categorías, licencia, res_format, país."
 
 #: ckanext/stats/templates_legacy/ckanext/stats/leaderboard.html:20
 msgid "Choose area"
 msgstr "Selecciona un área"
+
+#: ckanext/agesic/templates/snippets/facet_list.html:65
+msgid "Uruguay Open Data Licence"
+msgstr "Licencia de Datos Abiertos de Uruguay"

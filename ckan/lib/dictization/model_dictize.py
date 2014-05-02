@@ -572,6 +572,19 @@ def package_to_api(pkg, context):
     dictized['ratings_count'] = len(pkg.ratings)
     dictized['notes_rendered'] = h.render_markdown(pkg.notes)
 
+    # SF: esto es para agregar las aplicaciones al json //FIXME: hacer bien
+    model = context['model']
+    relateds = model.Related.get_for_dataset(pkg, status='active')
+    related_items = []
+    for r in relateds:
+        related = r.related
+        related_items.append({'id': related.id, 'type': related.type,
+            'created': related.created.strftime('%Y-%m-%dT%H:%M:%S.%f'),
+            'title': related.title, 'url': related.url,
+            'image_url': related.image_url, 'description': related.description})
+    dictized['related'] = related_items
+    # SF fin
+
     site_url = config.get('ckan.site_url', None)
     if site_url:
         dictized['ckan_url'] = '%s/dataset/%s' % (site_url, pkg.name)
