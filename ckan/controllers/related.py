@@ -5,6 +5,7 @@ import ckan.logic as logic
 import ckan.lib.base as base
 import ckan.lib.helpers as h
 import ckan.lib.navl.dictization_functions as df
+import ckan.new_authz as new_authz
 
 from ckan.common import _, c
 
@@ -158,6 +159,9 @@ class RelatedController(base.BaseController):
             logic.check_access(auth_name, context, auth_dict)
         except logic.NotAuthorized:
             base.abort(401, base._('Not authorized'))
+
+        if not new_authz.is_sysadmin(c.user):
+            abort(401, _('Unauthorized to create a related item'))
 
         try:
             c.pkg_dict = logic.get_action('package_show')(context, {'id': id})
