@@ -71,11 +71,13 @@ def _pluck(field, arr):
 def _is_valid_field_name(name):
     '''
     Check that field name is valid:
+    * can't start or end with whitespace characters
     * can't start with underscore
     * can't contain double quote (")
     * can't be empty
     '''
-    return name.strip() and not name.startswith('_') and not '"' in name
+    return (name and name == name.strip() and not name.startswith('_')
+            and not '"' in name)
 
 
 def _is_valid_table_name(name):
@@ -750,12 +752,14 @@ def _validate_record(record, num, field_names):
 
 def _to_full_text(fields, record):
     full_text = []
+    ft_types = ['int8', 'int4', 'int2', 'float4', 'float8', 'date', 'time',
+                'timetz', 'timestamp', 'numeric', 'text']
     for field in fields:
         value = record.get(field['id'])
         if field['type'].lower() == 'nested' and value:
             full_text.extend(json_get_values(value))
-        elif field['type'].lower() == 'text' and value:
-            full_text.append(value)
+        elif field['type'].lower() in ft_types and str(value):
+            full_text.append(str(value))
     return ' '.join(full_text)
 
 
@@ -1158,12 +1162,24 @@ def search_sql(context, data_dict):
     timeout = context.get('query_timeout', _TIMEOUT)
     _cache_types(context)
 
+    sql = data_dict['sql'].replace('%', '%%')
+
     try:
+
         context['connection'].execute(
             u'SET LOCAL statement_timeout TO {0}'.format(timeout))
-        results = context['connection'].execute(
-            data_dict['sql'].replace('%', '%%')
-        )
+
+        table_names = datastore_helpers.get_table_names_from_sql(context, sql)
+        log.debug('Tables involved in input SQL: {0}'.format(table_names))
+
+        system_tables = [t for t in table_names if t.startswith('pg_')]
+        if len(system_tables):
+            raise toolkit.NotAuthorized({
+                'permissions': ['Not authorized to access system tables']
+            })
+
+        results = context['connection'].execute(sql)
+
         return format_results(context, results, data_dict)
 
     except ProgrammingError, e:
@@ -1171,12 +1187,17 @@ def search_sql(context, data_dict):
             raise toolkit.NotAuthorized({
                 'permissions': ['Not authorized to read resource.']
             })
+
+        def _remove_explain(msg):
+            return (msg.replace('EXPLAIN (FORMAT JSON) ', '')
+                       .replace('EXPLAIN ', ''))
+
         raise ValidationError({
-            'query': [str(e)],
+            'query': [_remove_explain(str(e))],
             'info': {
-                'statement': [e.statement],
+                'statement': [_remove_explain(e.statement)],
                 'params': [e.params],
-                'orig': [str(e.orig)]
+                'orig': [_remove_explain(str(e.orig))]
             }
         })
     except DBAPIError, e:
