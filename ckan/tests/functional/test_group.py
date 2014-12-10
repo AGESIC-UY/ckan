@@ -31,32 +31,6 @@ class TestGroup(FunctionalTestCase):
     def teardown_class(self):
         model.repo.rebuild_db()
 
-    def test_atom_feed_page_zero(self):
-        group_name = 'deletetest'
-        CreateTestData.create_groups([{'name': group_name,
-                                       'packages': []}],
-                                     admin_user_name='testsysadmin')
-
-        offset = url_for(controller='feed', action='group',
-                         id=group_name)
-        offset = offset + '?page=0'
-        res = self.app.get(offset)
-        assert '<feed' in res, res
-        assert 'xmlns="http://www.w3.org/2005/Atom"' in res, res
-        assert '</feed>' in res, res
-
-    def test_atom_feed_page_negative(self):
-        group_name = 'deletetest'
-        CreateTestData.create_groups([{'name': group_name,
-                                       'packages': []}],
-                                     admin_user_name='testsysadmin')
-
-        offset = url_for(controller='feed', action='group',
-                         id=group_name)
-        offset = offset + '?page=-2'
-        res = self.app.get(offset, expect_errors=True)
-        assert '"page" parameter must be a positive integer' in res, res
-
     def test_sorting(self):
         model.repo.rebuild_db()
 
@@ -69,12 +43,18 @@ class TestGroup(FunctionalTestCase):
         model.Session.add(pkg1)
         model.Session.add(pkg2)
 
-        CreateTestData.create_groups([{'name': "alpha", 'packages': []},
+        CreateTestData.create_groups([{'name': "alpha",
+                                       'title': "Alpha",
+                                       'packages': []},
                                       {'name': "beta",
+                                       'title': "Beta",
                                        'packages': ["pkg1", "pkg2"]},
                                       {'name': "delta",
+                                       'title': 'Delta',
                                        'packages': ["pkg1"]},
-                                      {'name': "gamma", 'packages': []}],
+                                      {'name': "gamma",
+                                       'title': "Gamma",
+                                       'packages': []}],
                                      admin_user_name='testsysadmin')
 
         context = {'model': model, 'session': model.Session,
@@ -84,6 +64,18 @@ class TestGroup(FunctionalTestCase):
         results = get_action('group_list')(context, data_dict)
         assert results[0]['name'] == u'alpha', results[0]['name']
         assert results[-1]['name'] == u'gamma', results[-1]['name']
+
+        # Test title forward
+        data_dict = {'all_fields': True, 'sort': 'title asc'}
+        results = get_action('group_list')(context, data_dict)
+        assert results[0]['name'] == u'alpha', results[0]['name']
+        assert results[-1]['name'] == u'gamma', results[-1]['name']
+
+        # Test title reverse
+        data_dict = {'all_fields': True, 'sort': 'title desc'}
+        results = get_action('group_list')(context, data_dict)
+        assert results[0]['name'] == u'gamma', results[0]['name']
+        assert results[-1]['name'] == u'alpha', results[-1]['name']
 
         # Test name reverse
         data_dict = {'all_fields': True, 'sort': 'name desc'}

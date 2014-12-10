@@ -160,7 +160,7 @@ class GroupController(base.BaseController):
 
         c.page = h.Page(
             collection=results,
-            page=request.params.get('page', 1),
+            page = self._get_page_number(request.params),
             url=h.pager_url,
             items_per_page=21
         )
@@ -217,15 +217,11 @@ class GroupController(base.BaseController):
         # if we drop support for those then we can delete this line.
         c.group_admins = new_authz.get_group_or_org_admin_ids(c.group.id)
 
-        try:
-            page = int(request.params.get('page', 1))
-        except ValueError, e:
-            abort(400, ('"page" parameter must be an integer'))
+        page = self._get_page_number(request.params)
 
         # most search operations should reset the page counter:
         params_nopage = [(k, v) for k, v in request.params.items()
                          if k != 'page']
-        #sort_by = request.params.get('sort', 'name asc')
         sort_by = request.params.get('sort', None)
 
         def search_url(params):
@@ -474,7 +470,7 @@ class GroupController(base.BaseController):
                    'for_edit': True,
                    'parent': request.params.get('parent', None)
                    }
-        data_dict = {'id': id}
+        data_dict = {'id': id, 'include_datasets': False}
 
         if context['save'] and not data:
             return self._save_edit(id, context)
@@ -884,39 +880,3 @@ class GroupController(base.BaseController):
             abort(404, _('Group not found'))
         except NotAuthorized:
             abort(401, _('Unauthorized to read group %s') % id)
-
-    def _render_edit_form(self, fs):
-        # errors arrive in c.error and fs.errors
-        c.fieldset = fs
-        return render('group/edit_form.html')
-
-    def _update(self, fs, group_name, group_id):
-        '''
-        Writes the POST data (associated with a group edit) to the database
-        @input c.error
-        '''
-        validation = fs.validate()
-        if not validation:
-            c.form = self._render_edit_form(fs)
-            raise base.ValidationException(fs)
-
-        try:
-            fs.sync()
-        except Exception, inst:
-            model.Session.rollback()
-            raise
-        else:
-            model.Session.commit()
-
-    def _update_authz(self, fs):
-        validation = fs.validate()
-        if not validation:
-            c.form = self._render_edit_form(fs)
-            raise base.ValidationException(fs)
-        try:
-            fs.sync()
-        except Exception, inst:
-            model.Session.rollback()
-            raise
-        else:
-            model.Session.commit()
