@@ -6389,5 +6389,5 @@ msgid "Choose area"
 msgstr "Selecciona un área"
 
 #: ckanext/agesic/templates/snippets/facet_list.html:65
-msgid "Uruguay Open Data Licence"
-msgstr "Licencia de Datos Abiertos de Uruguay"
+msgid "Uruguay Public Domain"
+msgstr "Dominio Público Uruguay"
