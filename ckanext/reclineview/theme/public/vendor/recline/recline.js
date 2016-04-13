@@ -1772,7 +1772,7 @@ my.GridRow = Backbone.View.extend({
       <textarea class="data-table-cell-editor-editor" bind="textarea">{{value}}</textarea> \
       <div id="data-table-cell-editor-actions"> \
         <div class="data-table-cell-editor-action"> \
-          <button class="okButton btn primary">Update</button> \
+          <button class="okButton btn primary">Actualizar</button> \
           <button class="cancelButton btn danger">Cancel</button> \
         </div> \
       </div> \
@@ -2325,13 +2325,13 @@ my.MapMenu = Backbone.View.extend({
         <div class="editor-field-type"> \
             <label class="radio"> \
               <input type="radio" id="editor-field-type-latlon" name="editor-field-type" value="latlon" checked="checked"/> \
-              Latitude / Longitude fields</label> \
+              campos Latitud / Longitud</label> \
             <label class="radio"> \
               <input type="radio" id="editor-field-type-geom" name="editor-field-type" value="geom" /> \
-              GeoJSON field</label> \
+              campo GeoJSON</label> \
         </div> \
         <div class="editor-field-type-latlon"> \
-          <label>Latitude field</label> \
+          <label>campo Latitud</label> \
           <div class="input editor-lat-field"> \
             <select> \
             <option value=""></option> \
@@ -2340,7 +2340,7 @@ my.MapMenu = Backbone.View.extend({
             {{/fields}} \
             </select> \
           </div> \
-          <label>Longitude field</label> \
+          <label>campo Longitud</label> \
           <div class="input editor-lon-field"> \
             <select> \
             <option value=""></option> \
@@ -2351,7 +2351,7 @@ my.MapMenu = Backbone.View.extend({
           </div> \
         </div> \
         <div class="editor-field-type-geom" style="display:none"> \
-          <label>Geometry field (GeoJSON)</label> \
+          <label>campo Geometría (GeoJSON)</label> \
           <div class="input editor-geom-field"> \
             <select> \
             <option value=""></option> \
@@ -2363,15 +2363,15 @@ my.MapMenu = Backbone.View.extend({
         </div> \
       </div> \
       <div class="editor-buttons"> \
-        <button class="btn editor-update-map">Update</button> \
+        <button class="btn editor-update-map">Actualizar</button> \
       </div> \
       <div class="editor-options" > \
         <label class="checkbox"> \
           <input type="checkbox" id="editor-auto-zoom" value="autozoom" checked="checked" /> \
-          Auto zoom to features</label> \
+          Zoom automático</label> \
         <label class="checkbox"> \
           <input type="checkbox" id="editor-cluster" value="cluster"/> \
-          Cluster markers</label> \
+          Agrupar marcadores</label> \
       </div> \
       <input type="hidden" class="editor-id" value="map-1" /> \
     </form> \
@@ -2531,14 +2531,14 @@ this.recline.View = this.recline.View || {};
 // var views = [
 //   {
 //     id: 'grid', // used for routing
-//     label: 'Grid', // used for view switcher
+//     label: 'Grilla', // used for view switcher
 //     view: new recline.View.Grid({
 //       model: dataset
 //     })
 //   },
 //   {
 //     id: 'graph',
-//     label: 'Graph',
+//     label: 'Gráfica',
 //     view: new recline.View.Graph({
 //       model: dataset
 //     })
@@ -2555,7 +2555,7 @@ this.recline.View = this.recline.View || {};
 // var sidebarViews = [
 //   {
 //     id: 'filterEditor', // used for routing
-//     label: 'Filters', // used for view switcher
+//     label: 'Filtros', // used for view switcher
 //     view: new recline.View.FilterEditor({
 //       model: dataset
 //     })
@@ -2603,7 +2603,7 @@ my.MultiView = Backbone.View.extend({
         </div> \
       </div> \
       <div class="recline-results-info"> \
-        <span class="doc-count">{{recordCount}}</span> records\
+        <span class="doc-count">{{recordCount}}</span> registros\
       </div> \
       <div class="menu-right"> \
         <div class="btn-group" data-toggle="buttons-checkbox"> \
@@ -2633,21 +2633,21 @@ my.MultiView = Backbone.View.extend({
     } else {
       this.pageViews = [{
         id: 'grid',
-        label: 'Grid',
+        label: 'Grilla',
         view: new my.SlickGrid({
           model: this.model,
           state: this.state.get('view-grid')
         })
       }, {
         id: 'graph',
-        label: 'Graph',
+        label: 'Gráfica',
         view: new my.Graph({
           model: this.model,
           state: this.state.get('view-graph')
         })
       }, {
         id: 'map',
-        label: 'Map',
+        label: 'Mapa',
         view: new my.Map({
           model: this.model,
           state: this.state.get('view-map')
@@ -2667,7 +2667,7 @@ my.MultiView = Backbone.View.extend({
     } else {
       this.sidebarViews = [{
         id: 'filterEditor',
-        label: 'Filters',
+        label: 'Filtros',
         view: new my.FilterEditor({
           model: this.model
         })
@@ -4036,7 +4036,7 @@ my.FilterEditor = Backbone.View.extend({
   template: ' \
     <div class="filters"> \
       <h3>Filters</h3> \
-      <a href="#" class="js-add-filter">Add filter</a> \
+      <a href="#" class="js-add-filter">Agregar filtro</a> \
       <form class="form-stacked js-add" style="display: none;"> \
         <fieldset> \
           <label>Field</label> \
@@ -4059,7 +4059,7 @@ my.FilterEditor = Backbone.View.extend({
           {{{filterRender}}} \
         {{/filters}} \
         {{#filters.length}} \
-        <button type="submit" class="btn">Update</button> \
+        <button type="submit" class="btn">Actualizar</button> \
         {{/filters.length}} \
       </form> \
     </div> \
@@ -4280,9 +4280,9 @@ my.QueryEditor = Backbone.View.extend({
     <form action="" method="GET" class="form-inline"> \
       <div class="input-prepend text-query"> \
         <span class="add-on"><i class="icon-search"></i></span> \
-        <label>Search</label><input type="text" name="q" value="{{q}}" class="span2" placeholder="Search data ..." class="search-query" /> \
+        <label>Search</label><input type="text" name="q" value="{{q}}" class="span2" placeholder="Buscar ..." class="search-query" /> \
       </div> \
-      <button type="submit" class="btn">Go &raquo;</button> \
+      <button type="submit" class="btn">Ir &raquo;</button> \
     </form> \
   ',
 
@@ -4322,7 +4322,7 @@ my.ValueFilter = Backbone.View.extend({
   template: ' \
     <div class="filters"> \
       <h3>Filters</h3> \
-      <button class="btn js-add-filter add-filter">Add filter</button> \
+      <button class="btn js-add-filter add-filter">Agregar filtro</button> \
       <form class="form-stacked js-add" style="display: none;"> \
         <fieldset> \
           <label>Field</label> \
@@ -4339,7 +4339,7 @@ my.ValueFilter = Backbone.View.extend({
           {{{filterRender}}} \
         {{/filters}} \
         {{#filters.length}} \
-        <button type="submit" class="btn update-filter">Update</button> \
+        <button type="submit" class="btn update-filter">Actualizar</button> \
         {{/filters.length}} \
       </form> \
     </div> \

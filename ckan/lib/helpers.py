@@ -106,7 +106,7 @@ def url(*args, **kw):
     '''Create url adding i18n information if selected
     wrapper for pylons.url'''
     locale = kw.pop('locale', None)
-    my_url = _pylons_default_url(*args, **kw)
+    my_url = re.sub('^http://catalogodatos.gub.uy/', 'https://catalogodatos.gub.uy/', _pylons_default_url(*args, **kw))
     return _add_i18n_to_url(my_url, locale=locale, **kw)
 
 
@@ -1923,7 +1923,8 @@ def featured_group_org(items, get_action, list_action, count):
         context = {'ignore_auth': True,
                    'limits': {'packages': 2},
                    'for_view': True}
-        data_dict = {'id': id}
+        data_dict = {'id': id,
+                     'include_datasets': True}
 
         try:
             out = logic.get_action(get_action)(context, data_dict)

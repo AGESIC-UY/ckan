@@ -1485,7 +1485,7 @@ CKAN.DataPreview = function ($, my) {
     if (reclineState.currentView === 'grid') {
       views = [ {
         id: 'grid',
-        label: 'Grid',
+        label: 'Grilla',
         view: new recline.View.SlickGrid({
           model: dataset,
           state: reclineState['view-grid']
@@ -1494,7 +1494,7 @@ CKAN.DataPreview = function ($, my) {
     } else if (reclineState.currentView === 'graph') {
       views = [ {
         id: 'graph',
-        label: 'Graph',
+        label: 'Gráfica',
         view: new recline.View.Graph({
           model: dataset,
           state: reclineState['view-graph']
@@ -1503,7 +1503,7 @@ CKAN.DataPreview = function ($, my) {
     } else if (reclineState.currentView === 'map') {
       views = [ {
         id: 'map',
-        label: 'Map',
+        label: 'Mapa',
         view: new recline.View.Map({
           model: dataset,
           state: reclineState['view-map']
@@ -1565,21 +1565,21 @@ CKAN.DataPreview = function ($, my) {
       var views = [
         {
           id: 'grid',
-          label: 'Grid',
+          label: 'Grilla',
           view: new recline.View.SlickGrid({
             model: dataset
           })
         },
         {
           id: 'graph',
-          label: 'Graph',
+          label: 'Gráfica',
           view: new recline.View.Graph({
             model: dataset
           })
         },
         {
           id: 'map',
-          label: 'Map',
+          label: 'Mapa',
           view: new recline.View.Map({
             model: dataset
           })

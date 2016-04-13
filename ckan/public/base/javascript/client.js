@@ -102,7 +102,7 @@
      * Returns a jQuery xhr promise.
      */
     getLocaleData: function (locale, success, error) {
-      var url = this.url('/api/i18n/' + (locale || ''));
+      var url = this.url('https://catalogodatos.gub.uy/api/i18n/' + (locale || ''));
       return jQuery.getJSON(url).then(success, error);
     },
 

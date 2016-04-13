@@ -152,21 +152,21 @@ this.ckan.module('recline_view', function (jQuery, _) {
       var views = [
         {
           id: 'grid',
-          label: 'Grid',
+          label: 'Grilla',
           view: new recline.View.SlickGrid({
             model: dataset
           })
         },
         {
           id: 'graph',
-          label: 'Graph',
+          label: 'Gráfica',
           view: new recline.View.Graph({
             model: dataset
           })
         },
         {
           id: 'map',
-          label: 'Map',
+          label: 'Mapa',
           view: new recline.View.Map({
             model: dataset
           })
@@ -176,7 +176,7 @@ this.ckan.module('recline_view', function (jQuery, _) {
       var sidebarViews = [
         {
           id: 'valueFilter',
-          label: 'Filters',
+          label: 'Filtros',
           view: new recline.View.ValueFilter({
             model: dataset
           })
