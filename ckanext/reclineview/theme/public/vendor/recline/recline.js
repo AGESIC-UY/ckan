@@ -1406,22 +1406,22 @@ my.FlotControls = Backbone.View.extend({
     <form class="form-stacked"> \
       <div class="clearfix"> \
         <div class="form-group"> \
-          <label>Graph Type</label> \
+          <label>Tipos de Gráficas</label> \
           <div class="input editor-type"> \
             <select class="form-control"> \
-              <option value="lines-and-points">Lines and Points</option> \
-              <option value="lines">Lines</option> \
-              <option value="points">Points</option> \
-              <option value="bars">Bars</option> \
-              <option value="columns">Columns</option> \
+              <option value="lines-and-points">Líneas y Puntos</option> \
+              <option value="lines">Líneas</option> \
+              <option value="points">Puntos</option> \
+              <option value="bars">Barras</option> \
+            <option value="columns">Columnas</option> \
             </select> \
           </div> \
         </div> \
         <div class="form-group"> \
-          <label>Group Column (Axis 1)</label> \
+          <label>Agrupar Columna (Eje 1)</label> \
           <div class="input editor-group"> \
             <select class="form-control"> \
-              <option value="">Please choose ...</option> \
+              <option value="">Por favor elija ...</option> \
                 {{#fields}} \
               <option value="{{id}}">{{label}}</option> \
                 {{/fields}} \
@@ -1432,10 +1432,10 @@ my.FlotControls = Backbone.View.extend({
         </div> \
       </div> \
       <div class="editor-buttons"> \
-        <button class="btn btn-default editor-add">Add Series</button> \
+        <button class="btn btn-default editor-add">Agregar Series</button> \
       </div> \
       <div class="editor-buttons editor-submit" comment="hidden temporarily" style="display: none;"> \
-        <button class="editor-save">Save</button> \
+        <button class="editor-save">Guardar</button> \
         <input type="hidden" class="editor-id" value="chart-1" /> \
       </div> \
     </form> \
@@ -1444,7 +1444,7 @@ my.FlotControls = Backbone.View.extend({
   templateSeriesEditor: ' \
     <div class="editor-series js-series-{{seriesIndex}}"> \
       <div class="form-group"> \
-        <label>Series <span>{{seriesName}} (Axis 2)</span> \
+        <label>Series <span>{{seriesName}} (Eje 2)</span> \
           [<a href="#remove" class="action-remove-series">Remove</a>] \
         </label> \
         <div class="input"> \
@@ -1778,8 +1778,8 @@ my.GridRow = Backbone.View.extend({
       <textarea class="data-table-cell-editor-editor" bind="textarea">{{value}}</textarea> \
       <div id="data-table-cell-editor-actions"> \
         <div class="data-table-cell-editor-action"> \
-          <button class="okButton btn primary">Update</button> \
-          <button class="cancelButton btn danger">Cancel</button> \
+          <button class="okButton btn primary">Actualizar</button> \
+          <button class="cancelButton btn danger">Cancelar</button> \
         </div> \
       </div> \
     </div> \
@@ -2342,13 +2342,13 @@ my.MapMenu = Backbone.View.extend({
         <div class="editor-field-type"> \
             <label class="radio"> \
               <input type="radio" id="editor-field-type-latlon" name="editor-field-type" value="latlon" checked="checked"/> \
-              Latitude / Longitude fields</label> \
+              Latitud / Longitud fields</label> \
             <label class="radio"> \
               <input type="radio" id="editor-field-type-geom" name="editor-field-type" value="geom" /> \
-              GeoJSON field</label> \
+              campo GeoJSON</label> \
         </div> \
         <div class="editor-field-type-latlon"> \
-          <label>Latitude field</label> \
+          <label>campo Latitud</label> \
           <div class="input editor-lat-field"> \
             <select class="form-control"> \
             <option value=""></option> \
@@ -2357,7 +2357,7 @@ my.MapMenu = Backbone.View.extend({
             {{/fields}} \
             </select> \
           </div> \
-          <label>Longitude field</label> \
+          <label>campo Longitud</label> \
           <div class="input editor-lon-field"> \
             <select class="form-control"> \
             <option value=""></option> \
