@@ -27,21 +27,21 @@ def validator_args(fn):
 
 @validator_args
 def default_resource_schema(
-        ignore_empty, unicode_safe, ignore, ignore_missing,
+        ignore_empty, unicode_safe, ignore, ignore_missing, not_empty,
         remove_whitespace, if_empty_guess_format, clean_format, isodate,
         int_validator, extras_unicode_convert, keep_extras):
     return {
         'id': [ignore_empty, unicode_safe],
         'revision_id': [ignore_missing, unicode_safe],
         'package_id': [ignore],
-        'url': [ignore_missing, unicode_safe, remove_whitespace],
-        'description': [ignore_missing, unicode_safe],
+        'url': [not_empty, unicode_safe, remove_whitespace],
+        'description': [not_empty, unicode_safe],
         'format': [if_empty_guess_format, ignore_missing, clean_format,
                    unicode_safe],
         'hash': [ignore_missing, unicode_safe],
         'state': [ignore],
         'position': [ignore],
-        'name': [ignore_missing, unicode_safe],
+        'name': [not_empty, unicode_safe],
         'resource_type': [ignore_missing, unicode_safe],
         'url_type': [ignore_missing, unicode_safe],
         'mimetype': [ignore_missing, unicode_safe],
@@ -121,7 +121,7 @@ def default_create_package_schema(
         'maintainer': [ignore_missing, unicode_safe],
         'maintainer_email': [ignore_missing, unicode_safe, email_validator],
         'license_id': [ignore_missing, unicode_safe],
-        'notes': [ignore_missing, unicode_safe],
+        'notes': [not_empty, unicode_safe],
         'url': [ignore_missing, unicode_safe],
         'version': [ignore_missing, unicode_safe, package_version_validator],
         'state': [ignore_not_package_admin, ignore_missing],

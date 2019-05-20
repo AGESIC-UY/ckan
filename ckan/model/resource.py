@@ -40,11 +40,11 @@ resource_table = Table(
            ForeignKey('package.id')),
     Column('url', types.UnicodeText, nullable=False),
     Column('format', types.UnicodeText),
-    Column('description', types.UnicodeText),
+    Column('description', types.UnicodeText, nullable=False),
     Column('hash', types.UnicodeText),
     Column('position', types.Integer),
 
-    Column('name', types.UnicodeText),
+    Column('name', types.UnicodeText, nullable=False),
     Column('resource_type', types.UnicodeText),
     Column('mimetype', types.UnicodeText),
     Column('mimetype_inner', types.UnicodeText),
