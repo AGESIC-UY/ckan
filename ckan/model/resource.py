@@ -39,7 +39,7 @@ resource_table = Table(
     Column('package_id', types.UnicodeText,
            ForeignKey('package.id')),
     Column('url', types.UnicodeText, nullable=False),
-    Column('format', types.UnicodeText),
+    Column('format', types.UnicodeText, nullable=False),
     Column('description', types.UnicodeText, nullable=False),
     Column('hash', types.UnicodeText),
     Column('position', types.Integer),
