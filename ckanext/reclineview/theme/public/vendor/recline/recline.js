@@ -1413,7 +1413,7 @@ my.FlotControls = Backbone.View.extend({
               <option value="lines">Líneas</option> \
               <option value="points">Puntos</option> \
               <option value="bars">Barras</option> \
-            <option value="columns">Columnas</option> \
+              <option value="columns">Columnas</option> \
             </select> \
           </div> \
         </div> \
@@ -2342,7 +2342,7 @@ my.MapMenu = Backbone.View.extend({
         <div class="editor-field-type"> \
             <label class="radio"> \
               <input type="radio" id="editor-field-type-latlon" name="editor-field-type" value="latlon" checked="checked"/> \
-              Latitud / Longitud fields</label> \
+              campos Latitud / Longitud</label> \
             <label class="radio"> \
               <input type="radio" id="editor-field-type-geom" name="editor-field-type" value="geom" /> \
               campo GeoJSON</label> \
@@ -2368,7 +2368,7 @@ my.MapMenu = Backbone.View.extend({
           </div> \
         </div> \
         <div class="editor-field-type-geom" style="display:none"> \
-          <label>Geometry field (GeoJSON)</label> \
+          <label>Campo Geometría (GeoJSON)</label> \
           <div class="input editor-geom-field"> \
             <select class="form-control"> \
             <option value=""></option> \
@@ -2380,15 +2380,15 @@ my.MapMenu = Backbone.View.extend({
         </div> \
       </div> \
       <div class="editor-buttons"> \
-        <button class="btn btn-default editor-update-map">Update</button> \
+        <button class="btn btn-default editor-update-map">Actualizar</button> \
       </div> \
       <div class="editor-options" > \
         <label class="checkbox"> \
           <input type="checkbox" id="editor-auto-zoom" value="autozoom" checked="checked" /> \
-          Auto zoom to features</label> \
+          Zoom automático</label> \
         <label class="checkbox"> \
           <input type="checkbox" id="editor-cluster" value="cluster"/> \
-          Cluster markers</label> \
+          Marcadores de clusters</label> \
       </div> \
       <input type="hidden" class="editor-id" value="map-1" /> \
     </form> \
@@ -2619,7 +2619,7 @@ my.MultiView = Backbone.View.extend({
         </div> \
       </div> \
       <div class="recline-results-info"> \
-        <span class="doc-count">{{recordCount}}</span> records\
+        <span class="doc-count">{{recordCount}}</span> registros\
       </div> \
       <div class="menu-right"> \
         <div class="btn-group" data-toggle="buttons-checkbox"> \
@@ -2649,21 +2649,21 @@ my.MultiView = Backbone.View.extend({
     } else {
       this.pageViews = [{
         id: 'grid',
-        label: 'Grid',
+        label: 'Tabla',
         view: new my.SlickGrid({
           model: this.model,
           state: this.state.get('view-grid')
         })
       }, {
         id: 'graph',
-        label: 'Graph',
+        label: 'Gráfica',
         view: new my.Graph({
           model: this.model,
           state: this.state.get('view-graph')
         })
       }, {
         id: 'map',
-        label: 'Map',
+        label: 'Mapa',
         view: new my.Map({
           model: this.model,
           state: this.state.get('view-map')
@@ -2683,13 +2683,13 @@ my.MultiView = Backbone.View.extend({
     } else {
       this.sidebarViews = [{
         id: 'filterEditor',
-        label: 'Filters',
+        label: 'Filtros',
         view: new my.FilterEditor({
           model: this.model
         })
       }, {
         id: 'fieldsView',
-        label: 'Fields',
+        label: 'Campos',
         view: new my.Fields({
           model: this.model
         })
@@ -4047,7 +4047,7 @@ my.FilterEditor = Backbone.View.extend({
   template: ' \
     <div class="filters"> \
       <h3>Filters</h3> \
-      <a href="#" class="js-add-filter">Add filter</a> \
+      <a href="#" class="js-add-filter">Agregar filtro</a> \
       <form class="form-stacked js-add" style="display: none;"> \
         <div class="form-group"> \
           <label>Field</label> \
@@ -4060,19 +4060,19 @@ my.FilterEditor = Backbone.View.extend({
         <div class="form-group"> \
           <label>Filter type</label> \
           <select class="filterType form-control"> \
-            <option value="term">Value</option> \
-            <option value="range">Range</option> \
-            <option value="geo_distance">Geo distance</option> \
+            <option value="term">Valor</option> \
+            <option value="range">Rango</option> \
+            <option value="geo_distance">Distancia geométrica</option> \
           </select> \
         </div> \
-        <button type="submit" class="btn btn-default">Add</button> \
+        <button type="submit" class="btn btn-default">Agregar</button> \
       </form> \
       <form class="form-stacked js-edit"> \
         {{#filters}} \
           {{{filterRender}}} \
         {{/filters}} \
         {{#filters.length}} \
-        <button type="submit" class="btn btn-default">Update</button> \
+        <button type="submit" class="btn btn-default">Actualizar</button> \
         {{/filters.length}} \
       </form> \
     </div> \
@@ -4097,11 +4097,11 @@ my.FilterEditor = Backbone.View.extend({
             <a class="js-remove-filter" href="#" title="Remove this filter" data-filter-id="{{id}}">&times;</a> \
           </legend> \
           <div class="form-group"> \
-            <label class="control-label" for="">From</label> \
+            <label class="control-label" for="">Desde</label> \
             <input class="input-sm" type="text" value="{{from}}" name="from" data-filter-field="{{field}}" data-filter-id="{{id}}" data-filter-type="{{type}}" /> \
           </div> \
           <div class="form-group"> \
-            <label class="control-label" for="">To</label> \
+            <label class="control-label" for="">Hasta</label> \
             <input class="input-sm" type="text" value="{{to}}" name="to" data-filter-field="{{field}}" data-filter-id="{{id}}" data-filter-type="{{type}}" /> \
           </div> \
         </fieldset> \
@@ -4115,15 +4115,15 @@ my.FilterEditor = Backbone.View.extend({
             <a class="js-remove-filter" href="#" title="Remove this filter" data-filter-id="{{id}}">&times;</a> \
           </legend> \
           <div class="form-group"> \
-            <label class="control-label" for="">Longitude</label> \
+            <label class="control-label" for="">Longitud</label> \
             <input class="input-sm" type="text" value="{{point.lon}}" name="lon" data-filter-field="{{field}}" data-filter-id="{{id}}" data-filter-type="{{type}}" /> \
           </div> \
           <div class="form-group"> \
-            <label class="control-label" for="">Latitude</label> \
+            <label class="control-label" for="">Latitud</label> \
             <input class="input-sm" type="text" value="{{point.lat}}" name="lat" data-filter-field="{{field}}" data-filter-id="{{id}}" data-filter-type="{{type}}" /> \
           </div> \
           <div class="form-group"> \
-            <label class="control-label" for="">Distance (km)</label> \
+            <label class="control-label" for="">Distancia (km)</label> \
             <input class="input-sm" type="text" value="{{distance}}" name="distance" data-filter-field="{{field}}" data-filter-id="{{id}}" data-filter-type="{{type}}" /> \
           </div> \
         </fieldset> \
@@ -4229,7 +4229,7 @@ my.Pager = Backbone.View.extend({
     <div class="pagination"> \
       <ul class="pagination"> \
         <li class="prev action-pagination-update"><a href="" class="btn btn-default">&laquo;</a></li> \
-        <li class="page-range"><a><label for="from">From</label><input id="from" name="from" type="text" value="{{from}}" /> &ndash; <label for="to">To</label><input id="to" name="to" type="text" value="{{to}}" /> </a></li> \
+        <li class="page-range"><a><label for="from">Desde</label><input id="from" name="from" type="text" value="{{from}}" /> &ndash; <label for="to">Hasta</label><input id="to" name="to" type="text" value="{{to}}" /> </a></li> \
         <li class="next action-pagination-update"><a href="" class="btn btn-default">&raquo;</a></li> \
       </ul> \
     </div> \
@@ -4306,11 +4306,11 @@ my.QueryEditor = Backbone.View.extend({
           <div class="input-group-addon"> \
             <i class="glyphicon glyphicon-search"></i> \
           </div> \
-          <label for="q">Search</label> \
-          <input class="form-control search-query" type="text" id="q" name="q" value="{{q}}" placeholder="Search data ..."> \
+          <label for="q">Buscar</label> \
+          <input class="form-control search-query" type="text" id="q" name="q" value="{{q}}" placeholder="Buscar ..."> \
         </div> \
       </div> \
-      <button type="submit" class="btn btn-default">Go &raquo;</button> \
+      <button type="submit" class="btn btn-default">Ir &raquo;</button> \
     </form> \
   ',
 
@@ -4350,7 +4350,7 @@ my.ValueFilter = Backbone.View.extend({
   template: ' \
     <div class="filters"> \
       <h3>Filters</h3> \
-      <button class="btn js-add-filter add-filter">Add filter</button> \
+      <button class="btn js-add-filter add-filter">Agregar filtro</button> \
       <form class="form-stacked js-add" style="display: none;"> \
         <fieldset> \
           <label>Field</label> \
@@ -4359,7 +4359,7 @@ my.ValueFilter = Backbone.View.extend({
             <option value="{{id}}">{{label}}</option> \
             {{/fields}} \
           </select> \
-          <button type="submit" class="btn">Add</button> \
+          <button type="submit" class="btn">Agregar</button> \
         </fieldset> \
       </form> \
       <form class="form-stacked js-edit"> \
@@ -4367,7 +4367,7 @@ my.ValueFilter = Backbone.View.extend({
           {{{filterRender}}} \
         {{/filters}} \
         {{#filters.length}} \
-        <button type="submit" class="btn update-filter">Update</button> \
+        <button type="submit" class="btn update-filter">Actualizar</button> \
         {{/filters.length}} \
       </form> \
     </div> \
