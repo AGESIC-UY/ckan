@@ -15,6 +15,7 @@ this.ckan.module('resource-view-embed', function ($) {
   function _onClick (event) {
     event.preventDefault();
     modal.modal('show');
+    modal.attr('style', modal.attr('style').replace('block', 'block !important'));
   }
 
   function _selectAllCode () {
