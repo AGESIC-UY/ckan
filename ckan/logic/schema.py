@@ -35,7 +35,7 @@ def default_resource_schema(
         'revision_id': [ignore_missing, unicode_safe],
         'package_id': [ignore],
         'url': [not_empty, unicode_safe, remove_whitespace],
-        'description': [unicode_safe, not_empty],
+        'description': [unicode_safe],
         'format': [not_empty, clean_format, unicode_safe],
         'hash': [ignore_missing, unicode_safe],
         'state': [ignore],
