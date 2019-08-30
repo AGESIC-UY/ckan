@@ -695,6 +695,7 @@ class PackageController(base.BaseController):
 
             data['package_id'] = id
             try:
+                assert data.get('description')
                 if resource_id:
                     data['id'] = resource_id
                     get_action('resource_update')(context, data)
@@ -704,6 +705,11 @@ class PackageController(base.BaseController):
                 errors = e.error_dict
                 error_summary = e.error_summary
                 return self.new_resource(id, data, errors, error_summary)
+
+            except AssertionError:
+                errors = {'description': ['Falta el valor']}
+                return self.new_resource(id, data, errors, None)
+
             except NotAuthorized:
                 abort(403, _('Unauthorized to create a resource'))
             except NotFound:
