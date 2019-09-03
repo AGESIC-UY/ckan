@@ -104,11 +104,15 @@ this.ckan.module('image-upload', function($) {
         this._nameIsDirty = true;
       }
 
-      if (options.is_url) {
+      is_url = this._isURL(this.field_url_input.val())
+
+      if (this.field_url_input.val() == "") {
+        this._showOnlyButtons();
+      } else if (options.is_url && is_url) {
         this._showOnlyFieldUrl();
 
         this._updateUrlLabel(this._('URL'));
-      } else if (options.is_upload) {
+      } else if (options.is_upload && !options.is_url) {
         this._showOnlyFieldUrl();
 
         this.field_url_input.prop('readonly', true);
@@ -275,6 +279,16 @@ this.ckan.module('image-upload', function($) {
         if (!this._nameIsDirty){
           this.field_name.val(name);
         }
-     }
+     },
+
+    _isURL: function (str) {
+        var pattern = new RegExp('^(https?|ftp):\\/\\/'+ // protocol
+          '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|'+ // domain name
+          '((\\d{1,3}\\.){3}\\d{1,3}))'+ // OR ip (v4) address
+          '(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*'+ // port and path
+          '(\\?[;&a-z\\d%_.~+=-]*)?'+ // query string
+          '(\\#[-a-z\\d_]*)?$','i'); // fragment locator
+        return !!pattern.test(str);
+    }
   };
 });
