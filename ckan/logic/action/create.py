@@ -230,6 +230,8 @@ def package_create(context, data_dict):
     context["id"] = pkg.id
     log.debug('Created object %s' % pkg.name)
 
+    # TODO: send notification for a new dataset created
+
     return_id_only = context.get('return_id_only', False)
 
     output = context['id'] if return_id_only \
