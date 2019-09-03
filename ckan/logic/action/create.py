@@ -7,6 +7,9 @@ import random
 import re
 from socket import error as socket_error
 import string
+import smtplib
+from email.MIMEText import MIMEText
+from email.MIMEMultipart import MIMEMultipart
 
 import paste.deploy.converters
 from sqlalchemy import func
@@ -230,7 +233,34 @@ def package_create(context, data_dict):
     context["id"] = pkg.id
     log.debug('Created object %s' % pkg.name)
 
-    # TODO: send notification for a new dataset created
+    # send notification for a new dataset created
+    smtp = smtplib.SMTP(
+        config.get('smtp.server', 'localhost'), config.get('smtp.port', 0))
+
+    try:
+        smtp.login(config.get('smtp.user'), config.get('smtp.password'))
+    except smtplib.SMTPException:
+        # ignore exception if login is not required
+        pass
+
+    msg = MIMEMultipart()
+    email = config.get('agesic.brokenurls_msg_to')
+    msg['To'] = email
+    msg['Subject'] = u'Nuevo conjunto de datos.'
+    msg.attach(MIMEText(open(
+        config.get('agesic.package_create_notification_template')
+    ).read() % (config.get('ckan.site_url'), pkg.name), 'html', 'utf-8'))
+
+    try:
+        mail_from = config.get('smtp.mail_from')
+        smtp.sendmail(mail_from, [email], msg.as_string())
+    except smtplib.SMTPRecipientsRefused:
+        print(u"ERROR: Email rechazado - %s" % email)
+    except smtplib.SMTPServerDisconnected:
+        print(u"ERROR: Servidor desconectado, no enviado - %s" % email)
+
+    smtp.close()
+    # end send notification
 
     return_id_only = context.get('return_id_only', False)
 
