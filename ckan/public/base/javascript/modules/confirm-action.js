@@ -98,13 +98,13 @@ this.ckan.module('confirm-action', function (jQuery) {
         element.on('click', '.btn-cancel', this._onConfirmCancel);
         element.modal({show: false});
 
-        element.find('.modal-title').text(this._('Please Confirm Action'));
+        element.find('.modal-title').text(this._('Por favor confirme la acción'));
         var content = this.options.content ||
                       this.options.i18n.content || /* Backwards-compatibility */
                       this._('Are you sure you want to perform this action?');
         element.find('.modal-body').text(content);
-        element.find('.btn-primary').text(this._('Confirm'));
-        element.find('.btn-cancel').text(this._('Cancel'));
+        element.find('.btn-primary').text(this._('Confirmar'));
+        element.find('.btn-cancel').text(this._('Cancelar'));
       }
       return this.modal;
     },
