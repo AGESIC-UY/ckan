@@ -4,7 +4,7 @@ this.ckan.module('resource-reorder', function($) {
   return {
     options: {
       id: false,
-      labelText: 'Reorder resources'
+      labelText: 'Reordenar recursos'
     },
     template: {
       title: '<h1></h1>',
@@ -53,10 +53,10 @@ this.ckan.module('resource-reorder', function($) {
         .hide()
         .insertAfter(this.el);
       $('.save', this.html_form_actions)
-        .text(this._('Save order'))
+        .text(this._('Guardar orden'))
         .on('click', this._onHandleSave);
       $('.cancel', this.html_form_actions)
-        .text(this._('Cancel'))
+        .text(this._('Cancelar'))
         .on('click', this._onHandleCancel);
 
       this.html_handles = $(this.template.handle)
