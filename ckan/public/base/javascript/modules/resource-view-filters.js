@@ -49,7 +49,7 @@ this.ckan.module('resource-view-filters', function (jQuery) {
       // TODO: Remove element from "data" when some select selects it.
       addFilterInput.select2({
         data: data,
-        placeholder: self._('Select a field'),
+        placeholder: self._('Seleccione un campo'),
         width: 'resolve',
       }).on('change', onChangeCallback);
 
