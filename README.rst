@@ -1,3 +1,10 @@
+CKAN es la plataforma de datos, de código abierto, líder a nivel mundial.
+
+CKAN es una solución completa de software lista para utilizar que hace los datos accesibles y utilizables al proveer herramientas para publicar, compartir, encontrar y usar los datos (incluyendo almacenamiento de datos y provisión de APIs de datos robustas). CKAN está orientada a proveedores de datos (gobiernos nacionales y regionales, compañías y organizaciones) que desean hacer sus datos abiertos y disponibles.
+
+CKAN es utilizada por gobiernos y grupos de usuarios a nivel mundial y gestiona una variedad de portales de datos oficiales y comunitarios, incluyendo portales para gobiernos locales, nacionales e internacionales tales como data.gov.uk de Reino Unido, europeandataportal.eu de la Unión Europea; datos.gob.ar de Argentina; además portales de los gobiernos de Dinamarca y Holanda, así como también sitios de ciudades y municipalidades en Estados Unidos, Reino Unido, Argentina, Finlandia y entre otros.
+
+
 CKAN: The Open Source Data Portal Software
 ==========================================
 
