@@ -4,6 +4,16 @@ CKAN es una solución completa de software lista para utilizar que hace los dato
 
 CKAN es utilizada por gobiernos y grupos de usuarios a nivel mundial y gestiona una variedad de portales de datos oficiales y comunitarios, incluyendo portales para gobiernos locales, nacionales e internacionales tales como data.gov.uk de Reino Unido, europeandataportal.eu de la Unión Europea; datos.gob.ar de Argentina; además portales de los gobiernos de Dinamarca y Holanda, así como también sitios de ciudades y municipalidades en Estados Unidos, Reino Unido, Argentina, Finlandia y entre otros.
 
+El catálogo está desarrollado en base a CKAN como herramienta de catálogo, e integra un conjunto de funcionalidades complementarias que buscan mejorar la experiencia de los usuarios y la calidad de los datos publicados:
+
+Transformación de datos: Usando la herramienta Pentaho y un conjunto de plantillas, se automatizó el proceso para que los publicadores puedan transformar sus conjuntos de datos en diferentes formatos abiertos, generar los metadatos y publicar.
+
+Registro de incidentes: Se integró la herramienta Sentrix para que los publicadores puedan registrar incidentes en el catálogo y tengan trazabilidad de los mismos y se cuente con una base de conocimiento de la resolución de los problemas.
+
+Monitor de calidad: Los publicadores al ingresar al catálogo acceden a un panel de Google Analytics, en el que pueden monitorear enlaces rotos, conjuntos de datos que no han sido actualizados o próximos a vencer, cantidad de accesos entre otros.
+
+Comentarios: Se incorporó como herramienta de comentarios CoralTalk, dado que permite que los datos personales de los usuarios queden almacenados en la infraestructura nacional.
+
 
 CKAN: The Open Source Data Portal Software
 ==========================================
